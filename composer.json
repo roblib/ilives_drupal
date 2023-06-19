@@ -44,7 +44,7 @@
         "drupal/field_group": "^3",
         "drupal/field_permissions": "^1",
         "drupal/field_report": "^2.1",
-        "drupal/flysystem": "^2.0@alpha",
+        "drupal/flysystem": "^2.0@beta || ^2.1.0@RC",
         "drupal/hal": "^1.0||^2.0",
         "drupal/matomo": "^1.19",
         "drupal/pdf": "^1.1",
@@ -82,10 +82,7 @@
             "drupal/core-composer-scaffold": true,
             "dealerdirect/phpcodesniffer-composer-installer": true
         },
-        "sort-packages": true,
-        "platform": {
-            "php": "7.4"
-        }
+        "sort-packages": true
     },
     "extra": {
         "drupal-scaffold": {

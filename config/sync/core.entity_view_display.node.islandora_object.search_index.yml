@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.search_index
     - field.field.node.islandora_object.field_abstract
     - field.field.node.islandora_object.field_alt_title
+    - field.field.node.islandora_object.field_batch_id
     - field.field.node.islandora_object.field_classification
     - field.field.node.islandora_object.field_coordinates
     - field.field.node.islandora_object.field_coordinates_text
@@ -41,6 +42,7 @@ dependencies:
     - field.field.node.islandora_object.field_place_published_country
     - field.field.node.islandora_object.field_resource_type
     - field.field.node.islandora_object.field_rights
+    - field.field.node.islandora_object.field_statement_of_responsibilit
     - field.field.node.islandora_object.field_subject
     - field.field.node.islandora_object.field_subject_general
     - field.field.node.islandora_object.field_subjects_name
@@ -428,9 +430,11 @@ content:
 hidden:
   display_media_entity_view_3: true
   display_media_thumbnail: true
+  field_batch_id: true
   field_model: true
   field_pid: true
   field_place_published_country: true
+  field_statement_of_responsibilit: true
   field_viewer_override: true
   field_weight: true
   islandora_fits_checksum: true

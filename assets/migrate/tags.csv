@@ -34,3 +34,6 @@ resource_types,Unspecified,The type of resource is unknown or undetermined.,http
 resource_types,Tactile,Resource that is intended to be perceived by touch.,http://id.loc.gov/vocabulary/resourceTypes/tac,resourceTypes,
 islandora_display,"OpenSeadragon","Display using the OpenSeadragon viewer",http://openseadragon.github.io,,
 islandora_display,"PDF.js","Display using the PDF.js viewer",http://mozilla.github.io/pdf.js,,
+islandora_media_use,"MODS",,http://www.loc.gov/mods/v3,,
+islandora_media_use,"Administrative",,http://library.upei.ca/ontology/use#Permission,,
+islandora_media_use,"hOCR",,https://discoverygarden.ca/use#hocr,,

@@ -1,0 +1,19 @@
+uuid: 22b79241-df0d-42e0-ba31-b84cfae97cb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_batch_id
+    - node.type.islandora_object
+id: node.islandora_object.field_batch_id
+field_name: field_batch_id
+entity_type: node
+bundle: islandora_object
+label: 'Batch ID'
+description: 'The batch ID, automatically entered by Workbench.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

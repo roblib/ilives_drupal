@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.islandora_object.field_abstract
     - field.field.node.islandora_object.field_alt_title
+    - field.field.node.islandora_object.field_batch_id
     - field.field.node.islandora_object.field_classification
     - field.field.node.islandora_object.field_coordinates
     - field.field.node.islandora_object.field_coordinates_text
@@ -41,6 +42,7 @@ dependencies:
     - field.field.node.islandora_object.field_place_published_country
     - field.field.node.islandora_object.field_resource_type
     - field.field.node.islandora_object.field_rights
+    - field.field.node.islandora_object.field_statement_of_responsibilit
     - field.field.node.islandora_object.field_subject
     - field.field.node.islandora_object.field_subject_general
     - field.field.node.islandora_object.field_subjects_name
@@ -122,6 +124,7 @@ hidden:
   display_media_service_file: true
   display_media_thumbnail: true
   field_alt_title: true
+  field_batch_id: true
   field_classification: true
   field_coordinates: true
   field_coordinates_text: true
@@ -154,6 +157,7 @@ hidden:
   field_place_published_country: true
   field_resource_type: true
   field_rights: true
+  field_statement_of_responsibilit: true
   field_subject: true
   field_subject_general: true
   field_subjects_name: true
