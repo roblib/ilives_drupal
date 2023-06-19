@@ -42,7 +42,7 @@ backend_config:
   connector: standard
   connector_config:
     scheme: http
-    host: 127.0.0.1
+    host: 137.149.200.93
     port: 8983
     core: ISLANDORA
     timeout: 5
