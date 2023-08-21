@@ -26,8 +26,8 @@
             }
         },
 	{
-	    "type": "vcs",
-	    "url": "https://github.com/digitalutsc/advanced_search.git"
+		"type": "vcs",
+		"url": "https://github.com/rosiel/advanced_search"
 	}
     ],
     "require": {
@@ -35,11 +35,12 @@
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.1",
+        "islandora/advanced_search": "dev-symfony6-compat",
         "drupal/better_exposed_filters": "^6.0",
         "drupal/bibcite": "^2.0@beta",
         "drupal/citation_select": "^1.0@beta",
-        "drupal/core-composer-scaffold": "^9.4",
-        "drupal/core-recommended": "^9.4",
+        "drupal/core-composer-scaffold": "^10.1",
+        "drupal/core-recommended": "^10.1",
         "drupal/facets": "^2",
         "drupal/field_group": "^3",
         "drupal/field_permissions": "^1",
@@ -58,9 +59,8 @@
         "drupal/views_data_export": "^1.2",
         "drupal/views_field_view": "^1.0@beta",
         "drupal/views_natural_sort": "^2.0@alpha",
-        "drush/drush": "^10.1",
+        "drush/drush": "^11",
         "islandora-rdm/islandora_fits": "dev-8.x-1.x as 1.x-dev",
-        "islandora/advanced_search": "dev-contrib",
         "islandora/controlled_access_terms": "^2",
         "islandora/islandora": "^2",
         "islandora/openseadragon": "^2",

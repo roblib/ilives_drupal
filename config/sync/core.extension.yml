@@ -60,7 +60,6 @@ module:
   islandora_text_extraction: 0
   islandora_text_extraction_defaults: 0
   islandora_video: 0
-  islandora_workbench_integration: 0
   jquery_ui: 0
   jquery_ui_autocomplete: 0
   jquery_ui_datepicker: 0
@@ -89,6 +88,7 @@ module:
   path_alias: 0
   pdf: 0
   pgsql: 0
+  phpass: 0
   prepopulate: 0
   rdf: 0
   responsive_image: 0
