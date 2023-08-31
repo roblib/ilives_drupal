@@ -37,7 +37,7 @@ jobs:
       - name: Install dependencies
         run: composer install
       - name: Test site installation
-        run: composer exec -- drush site:install --existing-config --db-url=sqlite:test_db --config-dir=../config/sync
+        run: composer exec -- drush site:install --existing-config --db-url=sqlite:test_db 
       - name: Inspect configuration
         # Just warnings, for now...
         continue-on-error: true
