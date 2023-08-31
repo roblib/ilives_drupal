@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php-versions: [ 8.1 ] # 8.2 may not be possible until we upgrade to D10. https://www.drupal.org/docs/system-requirements/php-requirements
+        php-versions: [ 8.1, 8.2 ]
 
     name: PHP ${{ matrix.php-versions }}
 
@@ -37,7 +37,7 @@ jobs:
       - name: Install dependencies
         run: composer install
       - name: Test site installation
-        run: composer exec -- drush site:install --existing-config --db-url=sqlite:test_db
+        run: composer exec -- drush site:install --existing-config --db-url=sqlite:test_db --config-dir=config/sync
       - name: Inspect configuration
         # Just warnings, for now...
         continue-on-error: true
