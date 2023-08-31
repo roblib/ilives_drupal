@@ -1,0 +1,22 @@
+uuid: 149b9280-70aa-423c-ba2a-7220eb388975
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_description
+    - taxonomy.vocabulary.rights_statements
+  module:
+    - text
+id: taxonomy_term.rights_statements.field_description
+field_name: field_description
+entity_type: taxonomy_term
+bundle: rights_statements
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

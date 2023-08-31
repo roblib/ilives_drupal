@@ -1,0 +1,19 @@
+uuid: b744de7a-327e-4b47-8ac9-47f0d3748730
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_works
+    - node.type.islandora_object
+id: node.islandora_object.field_additional_works
+field_name: field_additional_works
+entity_type: node
+bundle: islandora_object
+label: 'Additional Works'
+description: 'Enter a name-title entry of a work that is contained in, or related to, this work.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

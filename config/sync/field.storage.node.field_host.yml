@@ -1,4 +1,4 @@
-uuid: 41747580-288e-48d1-9aa7-ab8144d8b601
+uuid: ff49d2b8-636d-41cf-8212-7a87b0c31156
 langcode: en
 status: true
 dependencies:
@@ -8,14 +8,12 @@ dependencies:
 third_party_settings:
   field_permissions:
     permission_type: public
-_core:
-  default_config_hash: I0D7yaVXDONaycVxbUrsCAd9nwWs4oQMuBhJrfm8qxs
-id: node.field_local_identifier
-field_name: field_local_identifier
+id: node.field_host
+field_name: field_host
 entity_type: node
 type: string
 settings:
-  max_length: 255
+  max_length: 500
   case_sensitive: false
   is_ascii: false
 module: core

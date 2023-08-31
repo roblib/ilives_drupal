@@ -1,0 +1,45 @@
+uuid: 8b27a00e-33b1-4790-80d5-15b1496a35b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.rights_statements.field_authority_link
+    - field.field.taxonomy_term.rights_statements.field_description
+    - taxonomy.vocabulary.rights_statements
+  module:
+    - controlled_access_terms
+    - text
+id: taxonomy_term.rights_statements.default
+targetEntityType: taxonomy_term
+bundle: rights_statements
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_authority_link:
+    type: authority_formatter_default
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: _blank
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

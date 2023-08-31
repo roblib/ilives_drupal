@@ -1,16 +1,16 @@
-uuid: 22b79241-df0d-42e0-ba31-b84cfae97cb2
+uuid: 47613258-0bd0-4cf1-951e-286483d818fb
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_batch_id
+    - field.storage.node.field_host
     - node.type.islandora_object
-id: node.islandora_object.field_batch_id
-field_name: field_batch_id
+id: node.islandora_object.field_host
+field_name: field_host
 entity_type: node
 bundle: islandora_object
-label: 'Batch ID'
-description: 'The batch ID, automatically entered by Workbench.'
+label: 'Published In'
+description: 'Enter information about the host publication.'
 required: false
 translatable: false
 default_value: {  }

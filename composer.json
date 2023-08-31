@@ -35,7 +35,6 @@
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.1",
-        "islandora/advanced_search": "dev-symfony6-compat",
         "drupal/better_exposed_filters": "^6.0",
         "drupal/bibcite": "^2.0@beta",
         "drupal/citation_select": "^1.0@beta",
@@ -47,6 +46,7 @@
         "drupal/field_report": "^2.1",
         "drupal/flysystem": "^2.0@beta || ^2.1.0@RC",
         "drupal/hal": "^1.0||^2.0",
+        "drupal/leaflet": "^10.1",
         "drupal/matomo": "^1.19",
         "drupal/pdf": "^1.1",
         "drupal/rest_oai_pmh": "^2.0@beta",
@@ -61,12 +61,13 @@
         "drupal/views_natural_sort": "^2.0@alpha",
         "drush/drush": "^11",
         "islandora-rdm/islandora_fits": "dev-8.x-1.x as 1.x-dev",
+        "islandora/advanced_search": "dev-symfony6-compat",
         "islandora/controlled_access_terms": "^2",
         "islandora/islandora": "^2",
         "islandora/openseadragon": "^2",
         "islandora/views_nested_details": "^1.0",
         "library/pdf.js": "^2.4",
-        "mjordan/islandora_workbench_integration": "^1.0"
+        "mjordan/islandora_workbench_integration": "dev-main"
     },
     "conflict": {
         "drupal/drupal": "*",

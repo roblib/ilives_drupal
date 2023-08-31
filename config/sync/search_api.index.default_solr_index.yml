@@ -5,22 +5,17 @@ dependencies:
   config:
     - field.storage.node.field_alt_title
     - field.storage.node.field_member_of
-    - field.storage.node.field_description
     - field.storage.node.field_dewey_classification
     - field.storage.node.field_edition
     - field.storage.node.field_edtf_date_created
     - field.storage.node.field_extent
-    - field.storage.node.field_full_title
     - field.storage.node.field_isbn
     - field.storage.node.field_lcc_classification
     - field.storage.node.field_linked_agent
-    - field.storage.node.field_oclc_number
     - field.storage.node.field_physical_form
     - field.storage.node.field_resource_type
-    - field.storage.node.field_rights
     - field.storage.node.field_tags
     - field.storage.node.field_abstract
-    - field.storage.node.field_subject_general
     - field.storage.node.field_geographic_subject
     - field.storage.node.field_subjects_name
     - field.storage.node.field_temporal_subject
@@ -121,14 +116,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_member_of
-  field_description:
-    label: Description
-    datasource_id: 'entity:node'
-    property_path: field_description
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_description
   field_dewey_classification:
     label: 'Dewey Classification'
     datasource_id: 'entity:node'
@@ -166,14 +153,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_extent
-  field_full_title:
-    label: 'Full Title'
-    datasource_id: 'entity:node'
-    property_path: field_full_title
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_full_title
   field_isbn:
     label: ISBN
     datasource_id: 'entity:node'
@@ -208,14 +187,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_member_of
-  field_oclc_number:
-    label: 'OCLC Number'
-    datasource_id: 'entity:node'
-    property_path: field_oclc_number
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_oclc_number
   field_physical_form:
     label: 'Physical Form'
     datasource_id: 'entity:node'
@@ -234,14 +205,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_resource_type
-  field_rights:
-    label: Rights
-    datasource_id: 'entity:node'
-    property_path: field_rights
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_rights
   field_tags:
     label: Tags
     datasource_id: 'entity:node'
@@ -345,16 +308,6 @@ field_settings:
         - 'entity:node/field_subject_general'
         - 'entity:node/field_subjects_name'
         - 'entity:node/field_temporal_subject'
-  subject_general_name:
-    label: Subject
-    datasource_id: 'entity:node'
-    property_path: 'field_subject_general:entity:name'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_subject_general
-      module:
-        - taxonomy
   subject_geographic_name:
     label: 'Subject (Geographic)'
     datasource_id: 'entity:node'

@@ -1,0 +1,19 @@
+uuid: 8902e0d9-88fe-4f26-baa2-904483c62fb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_preceding
+    - node.type.islandora_object
+id: node.islandora_object.field_title_preceding
+field_name: field_title_preceding
+entity_type: node
+bundle: islandora_object
+label: 'Preceding Title'
+description: 'If this title is a continuing resource, enter here any previous titles of this resource.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

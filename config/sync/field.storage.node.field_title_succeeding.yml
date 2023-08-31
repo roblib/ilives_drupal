@@ -1,4 +1,4 @@
-uuid: d5064b75-8137-44c0-95ab-b5d6b01a629a
+uuid: d4c81be2-26d3-4cad-8a46-cf5fb0f67c11
 langcode: en
 status: true
 dependencies:
@@ -7,9 +7,9 @@ dependencies:
     - node
 third_party_settings:
   field_permissions:
-    permission_type: private
-id: node.field_batch_id
-field_name: field_batch_id
+    permission_type: public
+id: node.field_title_succeeding
+field_name: field_title_succeeding
 entity_type: node
 type: string
 settings:
