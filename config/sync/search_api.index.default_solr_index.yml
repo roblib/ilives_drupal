@@ -3,23 +3,23 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_abstract
     - field.storage.node.field_alt_title
+    - field.storage.node.field_edtf_date_created
     - field.storage.node.field_member_of
     - field.storage.node.field_dewey_classification
     - field.storage.node.field_edition
-    - field.storage.node.field_edtf_date_created
     - field.storage.node.field_extent
     - field.storage.node.field_isbn
     - field.storage.node.field_lcc_classification
     - field.storage.node.field_linked_agent
     - field.storage.node.field_physical_form
     - field.storage.node.field_resource_type
-    - field.storage.node.field_tags
-    - field.storage.node.field_abstract
     - field.storage.node.field_geographic_subject
     - field.storage.node.field_subjects_name
     - field.storage.node.field_temporal_subject
     - field.storage.node.field_subject
+    - field.storage.node.field_tags
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.search_index
   module:
@@ -70,7 +70,6 @@ field_settings:
       type: union
       fields:
         - 'entity:node/field_abstract'
-        - 'entity:node/field_description'
   author:
     label: 'Author name'
     datasource_id: 'entity:node'

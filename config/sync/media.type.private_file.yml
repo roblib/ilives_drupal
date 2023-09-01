@@ -1,0 +1,16 @@
+uuid: ab325a07-57e9-497e-9c4c-cc3cca77a2d5
+langcode: en
+status: false
+dependencies: {  }
+id: private_file
+label: 'Private File'
+description: 'A file that is not for public viewing. Administrative files only.'
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file_1
+field_map:
+  name: name
+  mimetype: field_mime_type
+  filesize: field_file_size
