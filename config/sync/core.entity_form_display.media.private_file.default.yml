@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.media.private_file.field_file_size
     - field.field.media.private_file.field_media_file_1
+    - field.field.media.private_file.field_media_of
+    - field.field.media.private_file.field_media_use
     - field.field.media.private_file.field_mime_type
     - media.type.private_file
   module:
@@ -34,6 +36,22 @@ content:
     region: content
     settings:
       progress_indicator: throbber
+    third_party_settings: {  }
+  field_media_of:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_media_use:
+    type: options_buttons
+    weight: 2
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_mime_type:
     type: string_textfield
