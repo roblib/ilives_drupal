@@ -5,6 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.storage.taxonomy_term.field_geo_geolocation
+    - taxonomy.vocabulary.islandora_models
+  content:
+    - 'taxonomy_term:islandora_models:dc5bb7ac-078f-4e7d-901e-9c048c2438d2'
   module:
     - geolocation
     - geolocation_leaflet
@@ -296,6 +299,52 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        field_model_target_id:
+          id: field_model_target_id
+          table: node__field_model
+          field: field_model_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            - 50
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: islandora_models
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
       style:
         type: maps_common
         options:
@@ -894,6 +943,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -922,6 +972,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:

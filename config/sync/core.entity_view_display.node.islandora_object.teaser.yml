@@ -44,7 +44,6 @@ dependencies:
     - node.type.islandora_object
   module:
     - controlled_access_terms
-    - search_api_solr
     - user
 _core:
   default_config_hash: JknApCSkcV3PzfTMK_yhbY65o6sBHvjIs5J6dJF2YI0
@@ -58,14 +57,17 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_abstract:
-    type: solr_highlighted_text_default
+  field_edtf_date_issued:
+    type: edtf_default
     label: inline
     settings:
-      prefix: '<strong>'
-      suffix: '</strong>'
+      date_separator: dash
+      date_order: big_endian
+      month_format: mm
+      day_format: dd
+      year_format: 'y'
     third_party_settings: {  }
-    weight: 5
+    weight: 2
     region: content
   field_linked_agent:
     type: typed_relation_default
@@ -73,33 +75,12 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 3
-    region: content
-  field_member_of:
-    type: entity_reference_label
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 7
-    region: content
-  field_model:
-    type: entity_reference_label
-    label: inline
-    settings:
-      link: false
-    third_party_settings: {  }
     weight: 1
-    region: content
-  islandora_fits_checksum:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 6
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 0
     region: content
 hidden:
   display_media_entity_view_1: true
@@ -107,13 +88,13 @@ hidden:
   display_media_original_download: true
   display_media_service_file: true
   display_media_thumbnail: true
+  field_abstract: true
   field_additional_works: true
   field_alt_title: true
   field_copyright_date: true
   field_dewey_classification: true
   field_edition: true
   field_edtf_date_created: true
-  field_edtf_date_issued: true
   field_extent: true
   field_frequency: true
   field_gemini_uri: true
@@ -124,7 +105,9 @@ hidden:
   field_isbn: true
   field_language: true
   field_lcc_classification: true
+  field_member_of: true
   field_mode_of_issuance: true
+  field_model: true
   field_note: true
   field_physical_form: true
   field_pid: true
@@ -141,6 +124,7 @@ hidden:
   field_title_succeeding: true
   field_viewer_override: true
   field_weight: true
+  islandora_fits_checksum: true
   langcode: true
   members_eva_entity_view_1: true
   openseadragon_media_evas_entity_view_1: true

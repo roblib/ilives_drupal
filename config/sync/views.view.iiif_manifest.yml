@@ -290,7 +290,7 @@ display:
           admin_label: ''
           plugin_id: string
           operator: '='
-          value: 'http://pcdm.org/use#OriginalFile'
+          value: 'http://pcdm.org/use#ServiceFile'
           group: 1
           exposed: false
           expose:
@@ -674,6 +674,57 @@ display:
           category_facets: {  }
           category_facets_concat_separator: ', '
       path: node/%node/book-manifest-original
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - user.permissions
+      tags:
+        - 'config:field.storage.media.field_media_file'
+        - 'config:field.storage.media.field_media_image'
+  rest_export_4:
+    id: rest_export_4
+    display_title: 'Book Manifest (Service File)'
+    display_plugin: rest_export
+    position: 3
+    display_options:
+      pager:
+        type: none
+        options:
+          offset: 0
+      style:
+        type: iiif_manifest
+        options:
+          uses_fields: false
+          iiif_tile_field:
+            field_media_file: field_media_file
+            field_media_image: field_media_image
+      row:
+        type: data_field
+        options:
+          field_options:
+            field_media_file:
+              alias: ''
+              raw_output: false
+            field_media_image:
+              alias: ''
+              raw_output: false
+      display_description: ''
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
+      path: node/%node/book-manifest-service
     cache_metadata:
       max-age: -1
       contexts:

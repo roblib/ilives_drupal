@@ -1,0 +1,22 @@
+uuid: b9e3df85-ff84-4fe6-b4ee-e0fda7205746
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: repo_items_at_islandora_object_
+label: 'Repo Items at islandora/object/'
+type: 'canonical_entities:node'
+pattern: 'islandora/object/[node:field_pid:value]'
+selection_criteria:
+  a28b263c-9243-49f6-8643-0db4afa713b7:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: a28b263c-9243-49f6-8643-0db4afa713b7
+    context_mapping:
+      node: node
+    bundles:
+      islandora_object: islandora_object
+selection_logic: and
+weight: -5
+relationships: {  }
