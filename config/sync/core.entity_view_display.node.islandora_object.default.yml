@@ -254,7 +254,7 @@ content:
     region: content
   field_other_links:
     type: link
-    label: above
+    label: inline
     settings:
       trim_length: 80
       url_only: false
@@ -274,7 +274,7 @@ content:
     region: content
   field_pid:
     type: string
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -298,7 +298,7 @@ content:
     region: content
   field_rights:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }

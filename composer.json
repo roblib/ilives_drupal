@@ -67,6 +67,7 @@
         "islandora/advanced_search": "dev-symfony6-compat",
         "islandora/controlled_access_terms": "^2",
         "islandora/islandora": "^2",
+        "islandora/islandora_mirador": "*",
         "islandora/openseadragon": "^2",
         "islandora/views_nested_details": "^1.0",
         "library/pdf.js": "^2.4",

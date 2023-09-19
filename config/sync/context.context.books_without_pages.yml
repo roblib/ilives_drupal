@@ -27,7 +27,7 @@ conditions:
     negate: false
     uuid: d80dacbf-4aaa-44b8-b2dd-c159cd707c5a
     context_mapping: {  }
-    values: openseadragon_block
+    values: mirador_block_multipaged_items
 reactions:
   blocks:
     id: blocks

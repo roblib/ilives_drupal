@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.mirador
     - core.entity_view_mode.media.open_seadragon
     - core.entity_view_mode.media.pdfjs
     - core.entity_view_mode.media.source
@@ -224,6 +225,58 @@ display:
       header: {  }
       footer: {  }
       display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - user.permissions
+      tags: {  }
+  block_1:
+    id: block_1
+    display_title: Mirador
+    display_plugin: block
+    position: 3
+    display_options:
+      empty:
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: view
+          empty: true
+          view_to_insert: 'media_display_blocks:openseadragon_original'
+          inherit_arguments: true
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:media'
+        options:
+          relationship: none
+          view_mode: mirador
+      defaults:
+        empty: false
+        style: false
+        row: false
+      display_description: ''
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
+      block_description: 'Media Display - Mirador - Service File with fallback to Original'
     cache_metadata:
       max-age: -1
       contexts:
