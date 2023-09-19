@@ -26,6 +26,7 @@ dependencies:
     - field.field.node.islandora_object.field_mode_of_issuance
     - field.field.node.islandora_object.field_model
     - field.field.node.islandora_object.field_note
+    - field.field.node.islandora_object.field_other_links
     - field.field.node.islandora_object.field_physical_form
     - field.field.node.islandora_object.field_pid
     - field.field.node.islandora_object.field_place_published
@@ -306,6 +307,7 @@ hidden:
   field_additional_works: true
   field_host: true
   field_model: true
+  field_other_links: true
   field_pid: true
   field_place_published_country: true
   field_rights: true

@@ -13,7 +13,7 @@ field_name: field_model
 entity_type: node
 bundle: islandora_object
 label: Model
-description: 'The internal-to-Islandora category of the resource. Affects how the item is displayed/viewed.'
+description: 'The category of the resource. Affects how the item is displayed/viewed, and is used as a facet in search.'
 required: true
 translatable: false
 default_value: {  }

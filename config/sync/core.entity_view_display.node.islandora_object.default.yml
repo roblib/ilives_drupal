@@ -25,6 +25,7 @@ dependencies:
     - field.field.node.islandora_object.field_mode_of_issuance
     - field.field.node.islandora_object.field_model
     - field.field.node.islandora_object.field_note
+    - field.field.node.islandora_object.field_other_links
     - field.field.node.islandora_object.field_physical_form
     - field.field.node.islandora_object.field_pid
     - field.field.node.islandora_object.field_place_published
@@ -43,6 +44,7 @@ dependencies:
     - node.type.islandora_object
   module:
     - controlled_access_terms
+    - link
     - text
     - user
 _core:
@@ -249,6 +251,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 10
+    region: content
+  field_other_links:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 44
     region: content
   field_physical_form:
     type: entity_reference_label

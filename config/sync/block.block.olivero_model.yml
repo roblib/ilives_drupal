@@ -1,33 +1,28 @@
-uuid: 0d7c4a49-f01f-47ba-a103-859f296b7f86
+uuid: 804c287a-eb3c-441e-b5bc-636cce12f9ab
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.resource_type_swc
+    - facets.facet.model
   module:
-    - context
     - facets
     - islandora
   theme:
     - olivero
-id: resource_type_swc
+id: olivero_model
 theme: olivero
 region: sidebar
-weight: -13
+weight: -15
 provider: null
-plugin: 'facet_block:resource_type_swc'
+plugin: 'facet_block:model'
 settings:
-  id: 'facet_block:resource_type_swc'
-  label: 'Resource Type'
+  id: 'facet_block:model'
+  label: Type
   label_display: visible
   provider: facets
   context_mapping: {  }
-  block_id: resource_type_swc
+  block_id: olivero_model
 visibility:
-  context_all:
-    id: context_all
-    negate: null
-    values: collection
   media_source_mimetype:
     id: media_source_mimetype
     negate: false

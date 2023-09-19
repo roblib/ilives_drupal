@@ -3,7 +3,38 @@ _core:
 enabled_entity_types:
   - user
 punctuation:
-  hyphen: 1
+  double_quotes: 0
+  quotes: 2
+  backtick: 2
+  comma: 2
+  period: 2
+  hyphen: 2
+  underscore: 2
+  colon: 2
+  semicolon: 2
+  pipe: 2
+  left_curly: 0
+  left_square: 0
+  right_curly: 0
+  right_square: 0
+  plus: 2
+  equal: 2
+  asterisk: 2
+  ampersand: 0
+  percent: 2
+  caret: 2
+  dollar: 2
+  hash: 2
+  at: 2
+  exclamation: 2
+  tilde: 2
+  left_parenthesis: 0
+  right_parenthesis: 0
+  question_mark: 0
+  less_than: 0
+  greater_than: 0
+  slash: 2
+  back_slash: 2
 verbose: false
 separator: '-'
 max_length: 100
@@ -11,7 +42,7 @@ max_component_length: 100
 transliterate: true
 reduce_ascii: false
 case: true
-ignore_words: 'a, an, as, at, before, but, by, for, from, is, in, into, like, of, off, on, onto, per, since, than, the, this, that, to, up, via, with'
+ignore_words: ''
 update_action: 2
 safe_tokens:
   - alias

@@ -11,12 +11,12 @@ dependencies:
 id: solrsearchcontentadvancedsearchforblock
 theme: olivero
 region: sidebar
-weight: -15
+weight: -16
 provider: null
 plugin: 'advanced_search_block:solr_search_content__block_1'
 settings:
   id: 'advanced_search_block:solr_search_content__block_1'
-  label: 'Search within Collection'
+  label: 'Search within this Collection'
   label_display: visible
   provider: advanced_search
   fields:
@@ -27,7 +27,7 @@ settings:
 visibility:
   context_all:
     id: context_all
-    negate: null
+    negate: false
     values: collection
   media_source_mimetype:
     id: media_source_mimetype

@@ -1,33 +1,28 @@
-uuid: 9d0c1b52-b1f3-414d-854a-6b68c98f76e8
+uuid: 4c8ca832-dc13-4ed1-bb1c-c6de39c8c197
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.year_swc
+    - facets.facet.model_swc
   module:
-    - context
     - facets
     - islandora
   theme:
     - olivero
-id: yearswc
+id: olivero_modelswc
 theme: olivero
 region: sidebar
-weight: 1
+weight: -14
 provider: null
-plugin: 'facet_block:year_swc'
+plugin: 'facet_block:model_swc'
 settings:
-  id: 'facet_block:year_swc'
-  label: Year
+  id: 'facet_block:model_swc'
+  label: Type
   label_display: visible
   provider: facets
   context_mapping: {  }
-  block_id: yearswc
+  block_id: olivero_modelswc
 visibility:
-  context_all:
-    id: context_all
-    negate: null
-    values: collection
   media_source_mimetype:
     id: media_source_mimetype
     negate: false

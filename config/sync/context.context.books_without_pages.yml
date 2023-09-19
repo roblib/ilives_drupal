@@ -1,0 +1,56 @@
+uuid: 141ba56f-c4c6-4d85-ba21-f6aebc2af488
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:752e7340-7038-47de-87a1-5598d0238716'
+  module:
+    - block_content
+    - islandora
+label: 'Books without Pages'
+name: books_without_pages
+group: Display
+description: 'Display a message on books that don''t have the "In Copyright" statement.'
+requireAllConditions: true
+disabled: false
+conditions:
+  node_has_term:
+    id: node_has_term
+    negate: true
+    uuid: 3b6c14de-a3ac-45eb-8d3e-75c55e8c0bb3
+    context_mapping:
+      node: '@node.node_route_context:node'
+    uri: 'http://rightsstatements.org/vocab/InC/1.0/'
+    logic: and
+  context_all:
+    id: context_all
+    negate: false
+    uuid: d80dacbf-4aaa-44b8-b2dd-c159cd707c5a
+    context_mapping: {  }
+    values: openseadragon_block
+reactions:
+  blocks:
+    id: blocks
+    uuid: 6c8588e3-6111-4d79-9f24-00bc37c3ca21
+    blocks:
+      1072eb4e-8020-401a-8b8d-1f7da3d8303a:
+        uuid: 1072eb4e-8020-401a-8b8d-1f7da3d8303a
+        id: 'block_content:752e7340-7038-47de-87a1-5598d0238716'
+        label: 'Book has not been digitized'
+        provider: block_content
+        label_display: '0'
+        region: content_above
+        weight: '0'
+        custom_id: block_content_752e7340_7038_47de_87a1_5598d0238716
+        theme: olivero
+        css_class: ''
+        unique: 0
+        context_id: books_without_pages
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0

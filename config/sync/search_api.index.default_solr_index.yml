@@ -13,7 +13,9 @@ dependencies:
     - field.storage.node.field_isbn
     - field.storage.node.field_lcc_classification
     - field.storage.node.field_linked_agent
+    - field.storage.node.field_model
     - field.storage.node.field_physical_form
+    - field.storage.node.field_pid
     - field.storage.node.field_resource_type
     - field.storage.node.field_geographic_subject
     - field.storage.node.field_subjects_name
@@ -186,6 +188,16 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_member_of
+  field_model_name:
+    label: Model
+    datasource_id: 'entity:node'
+    property_path: 'field_model:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_model
+      module:
+        - taxonomy
   field_physical_form:
     label: 'Physical Form'
     datasource_id: 'entity:node'
@@ -196,6 +208,14 @@ field_settings:
         - field.storage.node.field_physical_form
       module:
         - taxonomy
+  field_pid:
+    label: PID
+    datasource_id: 'entity:node'
+    property_path: field_pid
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_pid
   field_resource_type:
     label: 'Resource Type'
     datasource_id: 'entity:node'
