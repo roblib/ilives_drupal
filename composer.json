@@ -24,17 +24,14 @@
                     "type": "zip"
                 }
             }
-        },
-	{
-		"type": "vcs",
-		"url": "https://github.com/rosiel/advanced_search"
-	}
+        }
     ],
     "require": {
         "php": "^7.4 || ^8",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.1",
+        "drupal/advanced_search": "^2",
         "drupal/better_exposed_filters": "^6.0",
         "drupal/bibcite": "^2.0@beta",
         "drupal/citation_select": "^1.0@beta",
@@ -64,7 +61,6 @@
         "drupal/views_natural_sort": "^2.0@alpha",
         "drush/drush": "^11",
         "islandora-rdm/islandora_fits": "dev-8.x-1.x as 1.x-dev",
-        "islandora/advanced_search": "dev-symfony6-compat",
         "islandora/controlled_access_terms": "^2",
         "islandora/islandora": "^2",
         "islandora/islandora_mirador": "*",

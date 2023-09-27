@@ -184,7 +184,7 @@ display:
           field: view
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: 'Thumbnail with fallback'
           plugin_id: view
           label: ''
           exclude: false
@@ -632,7 +632,7 @@ display:
           multi_type: separator
           multi_separator: ', '
       pager:
-        type: mini
+        type: full
         options:
           offset: 0
           items_per_page: 15
@@ -641,6 +641,8 @@ display:
           tags:
             next: 'next ›'
             previous: '‹ previous'
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: true
             items_per_page_label: 'Items per page'
@@ -649,6 +651,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          quantity: 9
       exposed_form:
         type: basic
         options:

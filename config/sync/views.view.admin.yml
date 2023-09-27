@@ -274,9 +274,14 @@ display:
           category_facets: {  }
           category_facets_concat_separator: ', '
       path: admin-export
-      filename: ''
+      displays:
+        page_1: page_1
+        default: '0'
+      filename: staging-pids.csv
       automatic_download: true
-      store_in_public_file_directory: false
+      export_method: batch
+      export_batch_size: 1000
+      store_in_public_file_directory: true
       custom_redirect_path: false
       redirect_to_display: none
       include_query_params: false

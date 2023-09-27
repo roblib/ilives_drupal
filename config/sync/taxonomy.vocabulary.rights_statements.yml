@@ -2,7 +2,7 @@ uuid: 09b4958a-4fc2-4f16-9bd4-d10d6fff05df
 langcode: en
 status: true
 dependencies: {  }
-name: 'Rights Statements'
+name: 'Rights Statements and Copyright Terms'
 vid: rights_statements
-description: 'from rightsstatements.org'
+description: 'from rightsstatements.org and creativecommons.org'
 weight: 0

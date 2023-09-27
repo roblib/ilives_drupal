@@ -20,8 +20,13 @@ conditions:
     uuid: e5689bd5-7eec-4378-b329-2f35d5bb35b0
     context_mapping:
       node: '@node.node_route_context:node'
-    uri: 'https://schema.org/Book,https://schema.org/PublicationIssue'
-    logic: or
+    uri: 'https://schema.org/Book,https://projectmirador.org'
+    logic: and
+  node_referenced_by_node:
+    id: node_referenced_by_node
+    negate: false
+    reference_field: field_member_of
+    uuid: 2b92495c-a0e0-4474-b18e-92c24c277abc
 reactions:
   blocks:
     id: blocks

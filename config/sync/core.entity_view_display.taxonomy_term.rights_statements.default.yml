@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.rights_statements.field_authority_link
-    - field.field.taxonomy_term.rights_statements.field_description
     - taxonomy.vocabulary.rights_statements
   module:
     - controlled_access_terms
@@ -30,13 +29,6 @@ content:
       url_plain: false
       rel: ''
       target: _blank
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  field_description:
-    type: text_default
-    label: above
-    settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content

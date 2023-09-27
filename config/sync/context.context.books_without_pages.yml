@@ -1,4 +1,4 @@
-uuid: 141ba56f-c4c6-4d85-ba21-f6aebc2af488
+uuid: 5bf4164e-91aa-43c3-a3e7-6ceaa86fd6f1
 langcode: en
 status: true
 dependencies:
@@ -7,34 +7,35 @@ dependencies:
   module:
     - block_content
     - islandora
-label: 'Books without Pages'
+label: 'Books without pages'
 name: books_without_pages
 group: Display
-description: 'Display a message on books that don''t have the "In Copyright" statement.'
+description: "Display a message on books that don't have pages"
 requireAllConditions: true
 disabled: false
 conditions:
   node_has_term:
     id: node_has_term
-    negate: true
-    uuid: 3b6c14de-a3ac-45eb-8d3e-75c55e8c0bb3
+    negate: false
+    uuid: b11155df-f20a-4681-b0be-fe846ddc5067
     context_mapping:
       node: '@node.node_route_context:node'
-    uri: 'http://rightsstatements.org/vocab/InC/1.0/'
+    uri: 'https://schema.org/Book'
     logic: and
-  context_all:
-    id: context_all
-    negate: false
-    uuid: d80dacbf-4aaa-44b8-b2dd-c159cd707c5a
-    context_mapping: {  }
-    values: mirador_block_multipaged_items
+  node_referenced_by_node:
+    id: node_referenced_by_node
+    negate: 1
+    reference_field: field_member_of
+    uuid: b04ac6b5-12c7-4623-a57d-da6c646d62f5
+    context_mapping:
+      node: '@node.node_route_context:node'
 reactions:
   blocks:
     id: blocks
-    uuid: 6c8588e3-6111-4d79-9f24-00bc37c3ca21
+    uuid: 44207d36-07fd-4797-bd1b-55debb1a9794
     blocks:
-      1072eb4e-8020-401a-8b8d-1f7da3d8303a:
-        uuid: 1072eb4e-8020-401a-8b8d-1f7da3d8303a
+      a8ba2fd9-2ae4-4b33-95c4-0fa1c7019a88:
+        uuid: a8ba2fd9-2ae4-4b33-95c4-0fa1c7019a88
         id: 'block_content:752e7340-7038-47de-87a1-5598d0238716'
         label: 'Book has not been digitized'
         provider: block_content
@@ -51,6 +52,6 @@ reactions:
         info: ''
         view_mode: full
         third_party_settings: {  }
-    include_default_blocks: 0
+    include_default_blocks: 1
     saved: false
 weight: 0

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "732442994cb6b99e732a76da22d45115",
+    "content-hash": "405c227e4eba4f71fce350e5ad00585d",
     "packages": [
         {
             "name": "academicpuma/citeproc-php",
@@ -1548,6 +1548,95 @@
             }
         },
         {
+            "name": "drupal/advanced_search",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/advanced_search.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/advanced_search-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "c5417df7fb411dea032975ea1dfb87e9f658a589"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10",
+                "drupal/facets": "^2.0",
+                "drupal/search_api_solr": "^4.2"
+            },
+            "require-dev": {
+                "drupal/coder": "*",
+                "phpunit/phpunit": "^8",
+                "sebastian/phpcpd": "*",
+                "squizlabs/php_codesniffer": "^3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1695751418",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "scripts": {
+                "post-install-cmd": [
+                    "./vendor/bin/phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer"
+                ],
+                "post-update-cmd": [
+                    "./vendor/bin/phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer"
+                ],
+                "check": [
+                    "./vendor/bin/phpcs --standard=Drupal --ignore=*.md,vendor --extensions=php,module,inc,install,test,profile,theme,css,info .",
+                    "./vendor/bin/phpcpd --names='*.module,*.inc,*.test,*.php' --exclude=vendor ."
+                ]
+            },
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "community-islandora",
+                    "homepage": "https://www.drupal.org/user/3441437"
+                },
+                {
+                    "name": "donrichards",
+                    "homepage": "https://www.drupal.org/user/3519850"
+                },
+                {
+                    "name": "kylehuynh",
+                    "homepage": "https://www.drupal.org/user/3255474"
+                },
+                {
+                    "name": "rosiel",
+                    "homepage": "https://www.drupal.org/user/3263030"
+                },
+                {
+                    "name": "seth.e.shaw",
+                    "homepage": "https://www.drupal.org/user/50620"
+                },
+                {
+                    "name": "wgillingham",
+                    "homepage": "https://www.drupal.org/user/112955"
+                }
+            ],
+            "description": "This module creates several blocks to support searching. It also enables the use of Ajax with search blocks, facets, and search results.",
+            "homepage": "https://github.com/digitalutsc/advanced_search",
+            "keywords": [
+                "Advanced Search",
+                "Islandora"
+            ],
+            "support": {
+                "source": "https://github.com/digitalutsc/advanced_search/tree/islandora_lite",
+                "issues": "https://github.com/digitalutsc/advanced_search/issues"
+            }
+        },
+        {
             "name": "drupal/better_exposed_filters",
             "version": "6.0.3",
             "source": {
@@ -1938,16 +2027,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "10.1.3",
+            "version": "10.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "0943d60970670a7f7c18ee24a800b3b87aac4641"
+                "reference": "443b8e72b4dff11cd0d6b40de5cd887c7a9bd94d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/0943d60970670a7f7c18ee24a800b3b87aac4641",
-                "reference": "0943d60970670a7f7c18ee24a800b3b87aac4641",
+                "url": "https://api.github.com/repos/drupal/core/zipball/443b8e72b4dff11cd0d6b40de5cd887c7a9bd94d",
+                "reference": "443b8e72b4dff11cd0d6b40de5cd887c7a9bd94d",
                 "shasum": ""
             },
             "require": {
@@ -2092,13 +2181,13 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/10.1.3"
+                "source": "https://github.com/drupal/core/tree/10.1.4"
             },
-            "time": "2023-09-07T15:19:51+00:00"
+            "time": "2023-09-19T17:57:50+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "10.1.3",
+            "version": "10.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -2142,22 +2231,22 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/10.1.3"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/10.1.4"
             },
             "time": "2023-04-30T16:15:32+00:00"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "10.1.3",
+            "version": "10.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "d32977bba64355e7399cf63db4cea41b3172d6fa"
+                "reference": "c0306542c1e9377a47ce5f6084e1bd03c32d4817"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/d32977bba64355e7399cf63db4cea41b3172d6fa",
-                "reference": "d32977bba64355e7399cf63db4cea41b3172d6fa",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/c0306542c1e9377a47ce5f6084e1bd03c32d4817",
+                "reference": "c0306542c1e9377a47ce5f6084e1bd03c32d4817",
                 "shasum": ""
             },
             "require": {
@@ -2166,7 +2255,7 @@
                 "doctrine/annotations": "~1.14.3",
                 "doctrine/deprecations": "~v1.1.1",
                 "doctrine/lexer": "~2.1.0",
-                "drupal/core": "10.1.3",
+                "drupal/core": "10.1.4",
                 "egulias/email-validator": "~4.0.1",
                 "guzzlehttp/guzzle": "~7.7.0",
                 "guzzlehttp/psr7": "~2.5.0",
@@ -2223,9 +2312,9 @@
             ],
             "description": "Core and its dependencies with known-compatible minor versions. Require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/10.1.3"
+                "source": "https://github.com/drupal/core-recommended/tree/10.1.4"
             },
-            "time": "2023-09-07T15:19:51+00:00"
+            "time": "2023-09-19T17:57:50+00:00"
         },
         {
             "name": "drupal/csv_serialization",
@@ -3439,10 +3528,6 @@
                     "homepage": "https://www.drupal.org/user/2369194"
                 },
                 {
-                    "name": "ivnish",
-                    "homepage": "https://www.drupal.org/user/3547706"
-                },
-                {
                     "name": "jrockowitz",
                     "homepage": "https://www.drupal.org/user/371407"
                 },
@@ -4425,19 +4510,20 @@
         },
         {
             "name": "drupal/search_api_solr",
-            "version": "4.2.12",
+            "version": "4.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/search_api_solr.git",
-                "reference": "4.2.12"
+                "reference": "4.3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api_solr-4.2.12.zip",
-                "reference": "4.2.12",
-                "shasum": "3e6c7b22cdd1339e8373f700fdfdec332ea24e02"
+                "url": "https://ftp.drupal.org/files/projects/search_api_solr-4.3.0.zip",
+                "reference": "4.3.0",
+                "shasum": "222e14f9ab49efb519e3a78674606880a2b07416"
             },
             "require": {
+                "composer-runtime-api": ">=2.0",
                 "composer/semver": "^1.0|^3.0",
                 "consolidation/annotated-command": "^2.12|^4.1",
                 "drupal/core": "^9.3 || ^10.0",
@@ -4473,8 +4559,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.2.12",
-                    "datestamp": "1687445036",
+                    "version": "4.3.0",
+                    "datestamp": "1695108471",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4611,17 +4697,17 @@
         },
         {
             "name": "drupal/term_merge",
-            "version": "2.0.0-beta4",
+            "version": "2.0.0-beta5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/term_merge.git",
-                "reference": "2.0.0-beta4"
+                "reference": "2.0.0-beta5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/term_merge-2.0.0-beta4.zip",
-                "reference": "2.0.0-beta4",
-                "shasum": "72350295559d0d8173743bcc63e2cd099fc4236f"
+                "url": "https://ftp.drupal.org/files/projects/term_merge-2.0.0-beta5.zip",
+                "reference": "2.0.0-beta5",
+                "shasum": "0fd2d18f7fd43be69a5891bd7b1377a4efbd1460"
             },
             "require": {
                 "drupal/core": "^9 || ^10",
@@ -4630,8 +4716,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0-beta4",
-                    "datestamp": "1665158256",
+                    "version": "2.0.0-beta5",
+                    "datestamp": "1695317218",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -6165,58 +6251,6 @@
             "time": "2023-07-03T22:50:13+00:00"
         },
         {
-            "name": "islandora/advanced_search",
-            "version": "dev-symfony6-compat",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rosiel/advanced_search.git",
-                "reference": "e45759882e913cb39f7953621b7139342e2091fa"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rosiel/advanced_search/zipball/e45759882e913cb39f7953621b7139342e2091fa",
-                "reference": "e45759882e913cb39f7953621b7139342e2091fa",
-                "shasum": ""
-            },
-            "require": {
-                "drupal/facets": "^2.0",
-                "drupal/search_api_solr": "^4.2"
-            },
-            "require-dev": {
-                "drupal/coder": "*",
-                "phpunit/phpunit": "^8",
-                "sebastian/phpcpd": "*",
-                "squizlabs/php_codesniffer": "^3"
-            },
-            "type": "drupal-module",
-            "scripts": {
-                "post-install-cmd": [
-                    "./vendor/bin/phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer"
-                ],
-                "post-update-cmd": [
-                    "./vendor/bin/phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer"
-                ],
-                "check": [
-                    "./vendor/bin/phpcs --standard=Drupal --ignore=*.md,vendor --extensions=php,module,inc,install,test,profile,theme,css,info .",
-                    "./vendor/bin/phpcpd --names='*.module,*.inc,*.test,*.php' --exclude=vendor ."
-                ]
-            },
-            "license": [
-                "GPL-2.0-only"
-            ],
-            "description": "This module creates several blocks to support searching. It also enables the use of Ajax with search blocks, facets, and search results.",
-            "homepage": "https://github.com/digitalutsc/advanced_search",
-            "keywords": [
-                "Advanced Search",
-                "Islandora"
-            ],
-            "support": {
-                "issues": "https://github.com/digitalutsc/advanced_search/issues",
-                "source": "https://github.com/digitalutsc/advanced_search/tree/islandora_lite"
-            },
-            "time": "2023-08-11T20:59:02+00:00"
-        },
-        {
             "name": "islandora/chullo",
             "version": "2.0.1",
             "source": {
@@ -6681,30 +6715,30 @@
         },
         {
             "name": "laminas/laminas-stdlib",
-            "version": "3.17.0",
+            "version": "3.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-stdlib.git",
-                "reference": "dd35c868075bad80b6718959740913e178eb4274"
+                "reference": "e85b29076c6216e7fc98e72b42dbe1bbc3b95ecf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/dd35c868075bad80b6718959740913e178eb4274",
-                "reference": "dd35c868075bad80b6718959740913e178eb4274",
+                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/e85b29076c6216e7fc98e72b42dbe1bbc3b95ecf",
+                "reference": "e85b29076c6216e7fc98e72b42dbe1bbc3b95ecf",
                 "shasum": ""
             },
             "require": {
-                "php": "~8.1.0 || ~8.2.0"
+                "php": "~8.1.0 || ~8.2.0 || ~8.3.0"
             },
             "conflict": {
                 "zendframework/zend-stdlib": "*"
             },
             "require-dev": {
                 "laminas/laminas-coding-standard": "^2.5",
-                "phpbench/phpbench": "^1.2.9",
-                "phpunit/phpunit": "^10.0.16",
+                "phpbench/phpbench": "^1.2.14",
+                "phpunit/phpunit": "^10.3.3",
                 "psalm/plugin-phpunit": "^0.18.4",
-                "vimeo/psalm": "^5.8"
+                "vimeo/psalm": "^5.15.0"
             },
             "type": "library",
             "autoload": {
@@ -6736,7 +6770,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2023-03-20T13:51:37+00:00"
+            "time": "2023-09-19T10:15:21+00:00"
         },
         {
             "name": "league/container",
@@ -6822,16 +6856,16 @@
         },
         {
             "name": "league/csv",
-            "version": "9.10.0",
+            "version": "9.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/csv.git",
-                "reference": "d24b0d484812313b07ab74b0fe4db9661606df6c"
+                "reference": "33149c4bea4949aa4fa3d03fb11ed28682168b39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/csv/zipball/d24b0d484812313b07ab74b0fe4db9661606df6c",
-                "reference": "d24b0d484812313b07ab74b0fe4db9661606df6c",
+                "url": "https://api.github.com/repos/thephpleague/csv/zipball/33149c4bea4949aa4fa3d03fb11ed28682168b39",
+                "reference": "33149c4bea4949aa4fa3d03fb11ed28682168b39",
                 "shasum": ""
             },
             "require": {
@@ -6906,7 +6940,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-04T15:12:48+00:00"
+            "time": "2023-09-23T10:09:54+00:00"
         },
         {
             "name": "league/flysystem",
@@ -7459,16 +7493,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.70.0",
+            "version": "2.71.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "d3298b38ea8612e5f77d38d1a99438e42f70341d"
+                "reference": "98276233188583f2ff845a0f992a235472d9466a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/d3298b38ea8612e5f77d38d1a99438e42f70341d",
-                "reference": "d3298b38ea8612e5f77d38d1a99438e42f70341d",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/98276233188583f2ff845a0f992a235472d9466a",
+                "reference": "98276233188583f2ff845a0f992a235472d9466a",
                 "shasum": ""
             },
             "require": {
@@ -7561,7 +7595,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-09-07T16:43:50+00:00"
+            "time": "2023-09-25T11:31:05+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -8313,16 +8347,16 @@
         },
         {
             "name": "psr/http-client",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-client.git",
-                "reference": "0955afe48220520692d2d09f7ab7e0f93ffd6a31"
+                "reference": "bb5906edc1c324c9a05aa0873d40117941e5fa90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-client/zipball/0955afe48220520692d2d09f7ab7e0f93ffd6a31",
-                "reference": "0955afe48220520692d2d09f7ab7e0f93ffd6a31",
+                "url": "https://api.github.com/repos/php-fig/http-client/zipball/bb5906edc1c324c9a05aa0873d40117941e5fa90",
+                "reference": "bb5906edc1c324c9a05aa0873d40117941e5fa90",
                 "shasum": ""
             },
             "require": {
@@ -8359,9 +8393,9 @@
                 "psr-18"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-client/tree/1.0.2"
+                "source": "https://github.com/php-fig/http-client"
             },
-            "time": "2023-04-10T20:12:12+00:00"
+            "time": "2023-09-23T14:17:50+00:00"
         },
         {
             "name": "psr/http-factory",
@@ -8713,27 +8747,27 @@
         },
         {
             "name": "solarium/solarium",
-            "version": "6.3.1",
+            "version": "6.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solariumphp/solarium.git",
-                "reference": "2c3d36d0e35fa88e386c80958b0b106f947fdce1"
+                "reference": "52e5623102bd8b056d159eea8cce991d21cb8593"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/2c3d36d0e35fa88e386c80958b0b106f947fdce1",
-                "reference": "2c3d36d0e35fa88e386c80958b0b106f947fdce1",
+                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/52e5623102bd8b056d159eea8cce991d21cb8593",
+                "reference": "52e5623102bd8b056d159eea8cce991d21cb8593",
                 "shasum": ""
             },
             "require": {
                 "composer-runtime-api": ">=2.0",
                 "ext-json": "*",
                 "halaxa/json-machine": "^1.1",
-                "php": "^7.3 || ^8.0",
+                "php": "^8.0",
                 "psr/event-dispatcher": "^1.0",
                 "psr/http-client": "^1.0",
                 "psr/http-factory": "^1.0",
-                "symfony/event-dispatcher-contracts": "^1.0 || ^2.0 || ^3.0"
+                "symfony/event-dispatcher-contracts": "^2.0 || ^3.0"
             },
             "require-dev": {
                 "escapestudios/symfony2-coding-standard": "^3.11",
@@ -8747,7 +8781,7 @@
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpunit/phpunit": "^9.6",
                 "roave/security-advisories": "dev-master",
-                "symfony/event-dispatcher": "^4.3 || ^5.0 || ^6.0"
+                "symfony/event-dispatcher": "^5.0 || ^6.0"
             },
             "type": "library",
             "autoload": {
@@ -8774,9 +8808,9 @@
             ],
             "support": {
                 "issues": "https://github.com/solariumphp/solarium/issues",
-                "source": "https://github.com/solariumphp/solarium/tree/6.3.1"
+                "source": "https://github.com/solariumphp/solarium/tree/6.3.2"
             },
-            "time": "2023-06-22T14:24:00+00:00"
+            "time": "2023-09-19T06:59:53+00:00"
         },
         {
             "name": "stomp-php/stomp-php",
@@ -12272,7 +12306,6 @@
         "drupal/views_field_view": 10,
         "drupal/views_natural_sort": 15,
         "islandora-rdm/islandora_fits": 20,
-        "islandora/advanced_search": 20,
         "mjordan/islandora_workbench_integration": 20
     },
     "prefer-stable": true,
