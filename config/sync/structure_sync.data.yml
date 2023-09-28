@@ -1,0 +1,14 @@
+blocks:
+  -
+    info: 'Book has not been digitized'
+    langcode: en
+    uuid: 752e7340-7038-47de-87a1-5598d0238716
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: '<p>This book has not yet been digitized. If this is your book, and you would like to give us permission to display it, please contact the Robertson Library.</p>'
+          summary: ''
+          format: basic_html
