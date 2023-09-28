@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b65c2906399d2bb8167e921efb08965c",
+    "content-hash": "98ceaaefe6922d4f8fffcf29bde97f96",
     "packages": [
         {
             "name": "academicpuma/citeproc-php",
@@ -1343,16 +1343,16 @@
         },
         {
             "name": "doctrine/deprecations",
-            "version": "v1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/deprecations.git",
-                "reference": "612a3ee5ab0d5dd97b7cf3874a6efe24325efac3"
+                "reference": "4f2d4f2836e7ec4e7a8625e75c6aa916004db931"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/612a3ee5ab0d5dd97b7cf3874a6efe24325efac3",
-                "reference": "612a3ee5ab0d5dd97b7cf3874a6efe24325efac3",
+                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/4f2d4f2836e7ec4e7a8625e75c6aa916004db931",
+                "reference": "4f2d4f2836e7ec4e7a8625e75c6aa916004db931",
                 "shasum": ""
             },
             "require": {
@@ -1384,9 +1384,9 @@
             "homepage": "https://www.doctrine-project.org/",
             "support": {
                 "issues": "https://github.com/doctrine/deprecations/issues",
-                "source": "https://github.com/doctrine/deprecations/tree/v1.1.1"
+                "source": "https://github.com/doctrine/deprecations/tree/1.1.2"
             },
-            "time": "2023-06-03T09:27:29+00:00"
+            "time": "2023-09-27T20:04:15+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -6504,16 +6504,16 @@
         },
         {
             "name": "islandora/islandora",
-            "version": "2.8.3",
+            "version": "2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Islandora/islandora.git",
-                "reference": "71f0945e3cbf818d3846bd355966dffc82b36c62"
+                "reference": "e2ec6730178d0a3a2aca9274f3c8e902e9297868"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Islandora/islandora/zipball/71f0945e3cbf818d3846bd355966dffc82b36c62",
-                "reference": "71f0945e3cbf818d3846bd355966dffc82b36c62",
+                "url": "https://api.github.com/repos/Islandora/islandora/zipball/e2ec6730178d0a3a2aca9274f3c8e902e9297868",
+                "reference": "e2ec6730178d0a3a2aca9274f3c8e902e9297868",
                 "shasum": ""
             },
             "require": {
@@ -6569,9 +6569,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Islandora/documentation/issues",
-                "source": "https://github.com/Islandora/islandora/tree/2.8.3"
+                "source": "https://github.com/Islandora/islandora/tree/2.9.0"
             },
-            "time": "2023-08-16T14:09:52+00:00"
+            "time": "2023-09-25T13:58:08+00:00"
         },
         {
             "name": "islandora/islandora_mirador",
