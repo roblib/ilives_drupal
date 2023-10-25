@@ -21,7 +21,7 @@ conditions:
     uuid: e5689bd5-7eec-4378-b329-2f35d5bb35b0
     context_mapping:
       node: '@node.node_route_context:node'
-    uri: 'https://schema.org/Book,https://projectmirador.org'
+    uri: 'https://schema.org/Book'
     logic: and
   node_referenced_by_node:
     id: node_referenced_by_node
@@ -38,9 +38,9 @@ reactions:
       399d489b-fe07-4ff2-ac20-b1273bd27f55:
         uuid: 399d489b-fe07-4ff2-ac20-b1273bd27f55
         id: mirador_block
-        label: 'Mirador block'
+        label: 'Book Viewer'
         provider: islandora_mirador
-        label_display: visible
+        label_display: '0'
         region: content_above
         weight: '0'
         custom_id: mirador_block
@@ -56,7 +56,7 @@ reactions:
         id: openseadragon_block
         label: 'Figures in this book'
         provider: openseadragon
-        label_display: visible
+        label_display: '0'
         region: content
         weight: '0'
         custom_id: openseadragon_block

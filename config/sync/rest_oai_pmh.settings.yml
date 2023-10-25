@@ -5,22 +5,21 @@ rest_oai_pmh:
 view_displays:
   'oai_pmh:all_repository_items': 'oai_pmh:all_repository_items'
   'oai_pmh:collection_sets': 'oai_pmh:collection_sets'
-  'oai_pmh:collectionless_set': 'oai_pmh:collectionless_set'
 support_sets: 1
 mapping_source: rdf
-repository_name: 'Islandora 8'
-repository_email: admin@example.com
+repository_name: 'Island Lives'
+repository_email: vresupport@upei.ca
 expiration: '3600'
 metadata_map_plugins:
+  -
+    label: oai_dc
+    value: dublin_core_rdf
   -
     label: mods
     value: mods
   -
     label: oai_raw
     value: ''
-  -
-    label: oai_dc
-    value: dublin_core_rdf
 cache_technique: liberal_cache
 mods_view:
   view_machine_name: oai_pmh_item_data

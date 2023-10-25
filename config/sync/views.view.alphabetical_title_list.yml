@@ -12,6 +12,7 @@ dependencies:
     - node
     - taxonomy
     - user
+    - views_natural_sort
 id: alphabetical_title_list
 label: 'Alphabetical Title List'
 module: views
@@ -138,7 +139,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: standard
-          order: ASC
+          order: NASC
           expose:
             label: ''
             field_identifier: ''

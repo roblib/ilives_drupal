@@ -64,7 +64,7 @@ third_party_settings:
       label: System
       region: content
       parent_name: ''
-      weight: 26
+      weight: 27
       format_type: details
       format_settings:
         classes: ''
@@ -237,7 +237,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 44
+    weight: 42
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -434,7 +434,7 @@ content:
     third_party_settings: {  }
   field_other_links:
     type: link_default
-    weight: 46
+    weight: 25
     region: content
     settings:
       placeholder_url: ''
@@ -546,13 +546,13 @@ content:
     third_party_settings: {  }
   field_viewer_override:
     type: options_select
-    weight: 25
+    weight: 26
     region: content
     settings: {  }
     third_party_settings: {  }
   field_weight:
     type: number
-    weight: 35
+    weight: 36
     region: content
     settings:
       placeholder: ''
@@ -566,27 +566,27 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 40
+    weight: 38
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 42
+    weight: 40
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 41
+    weight: 39
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 45
+    weight: 43
     region: content
     settings:
       display_label: true
@@ -600,13 +600,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 39
+    weight: 37
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 43
+    weight: 41
     region: content
     settings:
       match_operator: CONTAINS
