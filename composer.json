@@ -131,9 +131,6 @@
         "patches": {
 	    "drupal/matomo": {
 	        "https://www.drupal.org/project/matomo/issues/3363521": "https://www.drupal.org/files/issues/2023-06-29/matomo-3363521-7.patch"
-	    },
-	    "islandora/islandora_mirador": {
-	        "Fix full screen mirador viewer": "assets/patches/mirador-css.patch"
 	    }
 	}
     },
