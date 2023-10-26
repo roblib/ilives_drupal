@@ -64,7 +64,7 @@ third_party_settings:
       label: System
       region: content
       parent_name: ''
-      weight: 27
+      weight: 28
       format_type: details
       format_settings:
         classes: ''
@@ -129,7 +129,7 @@ third_party_settings:
       label: Identifiers
       region: content
       parent_name: ''
-      weight: 18
+      weight: 19
       format_type: details
       format_settings:
         classes: ''
@@ -144,7 +144,7 @@ third_party_settings:
       label: 'Publication Details'
       region: content
       parent_name: ''
-      weight: 9
+      weight: 10
       format_type: details
       format_settings:
         classes: ''
@@ -158,7 +158,7 @@ third_party_settings:
       label: 'Additional Date Types'
       region: content
       parent_name: ''
-      weight: 7
+      weight: 8
       format_type: details
       format_settings:
         classes: ''
@@ -174,7 +174,7 @@ third_party_settings:
       label: 'Specific Description Fields'
       region: content
       parent_name: ''
-      weight: 10
+      weight: 11
       format_type: details
       format_settings:
         classes: ''
@@ -189,7 +189,7 @@ third_party_settings:
       label: 'Classification '
       region: content
       parent_name: ''
-      weight: 17
+      weight: 18
       format_type: details
       format_settings:
         classes: ''
@@ -207,7 +207,7 @@ third_party_settings:
       label: 'Specific Subject Types'
       region: content
       parent_name: ''
-      weight: 16
+      weight: 17
       format_type: details
       format_settings:
         classes: ''
@@ -243,7 +243,7 @@ content:
     third_party_settings: {  }
   field_abstract:
     type: text_textarea
-    weight: 14
+    weight: 15
     region: content
     settings:
       rows: 5
@@ -251,7 +251,7 @@ content:
     third_party_settings: {  }
   field_additional_works:
     type: string_textfield
-    weight: 20
+    weight: 21
     region: content
     settings:
       size: 60
@@ -284,7 +284,7 @@ content:
     third_party_settings: {  }
   field_edition:
     type: string_textfield
-    weight: 8
+    weight: 9
     region: content
     settings:
       size: 60
@@ -292,7 +292,7 @@ content:
     third_party_settings: {  }
   field_edtf_date_created:
     type: edtf_default
-    weight: 6
+    weight: 7
     region: content
     settings:
       strict_dates: false
@@ -301,7 +301,7 @@ content:
     third_party_settings: {  }
   field_edtf_date_issued:
     type: edtf_default
-    weight: 5
+    weight: 6
     region: content
     settings:
       strict_dates: false
@@ -310,7 +310,7 @@ content:
     third_party_settings: {  }
   field_extent:
     type: string_textfield
-    weight: 15
+    weight: 16
     region: content
     settings:
       size: 60
@@ -328,7 +328,7 @@ content:
     third_party_settings: {  }
   field_genre:
     type: entity_reference_autocomplete
-    weight: 13
+    weight: 14
     region: content
     settings:
       match_operator: CONTAINS
@@ -338,7 +338,7 @@ content:
     third_party_settings: {  }
   field_geographic_subject:
     type: entity_reference_autocomplete
-    weight: 20
+    weight: 19
     region: content
     settings:
       match_operator: CONTAINS
@@ -348,7 +348,7 @@ content:
     third_party_settings: {  }
   field_host:
     type: string_textfield
-    weight: 23
+    weight: 24
     region: content
     settings:
       size: 60
@@ -372,7 +372,7 @@ content:
     third_party_settings: {  }
   field_language:
     type: entity_reference_autocomplete
-    weight: 11
+    weight: 12
     region: content
     settings:
       match_operator: CONTAINS
@@ -382,7 +382,7 @@ content:
     third_party_settings: {  }
   field_lcc_classification:
     type: string_textfield
-    weight: 25
+    weight: 26
     region: content
     settings:
       size: 60
@@ -426,7 +426,7 @@ content:
     third_party_settings: {  }
   field_note:
     type: text_textarea
-    weight: 16
+    weight: 17
     region: content
     settings:
       rows: 5
@@ -434,7 +434,7 @@ content:
     third_party_settings: {  }
   field_other_links:
     type: link_default
-    weight: 25
+    weight: 26
     region: content
     settings:
       placeholder_url: ''
@@ -442,7 +442,7 @@ content:
     third_party_settings: {  }
   field_physical_form:
     type: entity_reference_autocomplete
-    weight: 14
+    weight: 15
     region: content
     settings:
       match_operator: CONTAINS
@@ -460,21 +460,31 @@ content:
     third_party_settings: {  }
   field_place_published:
     type: string_textfield
-    weight: 4
+    weight: 5
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_place_published_country:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_resource_type:
     type: options_select
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   field_rights:
     type: entity_reference_autocomplete
-    weight: 24
+    weight: 25
     region: content
     settings:
       match_operator: CONTAINS
@@ -484,7 +494,7 @@ content:
     third_party_settings: {  }
   field_series:
     type: string_textfield
-    weight: 19
+    weight: 20
     region: content
     settings:
       size: 60
@@ -512,7 +522,7 @@ content:
     third_party_settings: {  }
   field_table_of_contents:
     type: text_textarea
-    weight: 15
+    weight: 16
     region: content
     settings:
       rows: 5
@@ -530,7 +540,7 @@ content:
     third_party_settings: {  }
   field_title_preceding:
     type: string_textfield
-    weight: 21
+    weight: 22
     region: content
     settings:
       size: 60
@@ -538,7 +548,7 @@ content:
     third_party_settings: {  }
   field_title_succeeding:
     type: string_textfield
-    weight: 22
+    weight: 23
     region: content
     settings:
       size: 60
@@ -546,13 +556,13 @@ content:
     third_party_settings: {  }
   field_viewer_override:
     type: options_select
-    weight: 26
+    weight: 27
     region: content
     settings: {  }
     third_party_settings: {  }
   field_weight:
     type: number
-    weight: 36
+    weight: 35
     region: content
     settings:
       placeholder: ''
@@ -566,7 +576,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 38
+    weight: 37
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -600,7 +610,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 37
+    weight: 36
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -614,5 +624,4 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  field_place_published_country: true
+hidden: {  }

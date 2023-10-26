@@ -12,8 +12,8 @@ id: node.islandora_object.field_place_published_country
 field_name: field_place_published_country
 entity_type: node
 bundle: islandora_object
-label: 'Country of Publication'
-description: ''
+label: 'Place Published (Jurisdiction)'
+description: 'Choose the narrowest applicable place (usually a province or state) from the MARC Country codes vocabulary. If the correct code is not present, add it to the vocabulary. '
 required: false
 translatable: false
 default_value: {  }

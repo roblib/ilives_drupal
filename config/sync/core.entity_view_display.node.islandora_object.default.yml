@@ -79,7 +79,7 @@ content:
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 8
+    weight: 9
     region: content
   field_additional_works:
     type: string
@@ -87,7 +87,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 26
+    weight: 27
     region: content
   field_alt_title:
     type: string
@@ -107,7 +107,7 @@ content:
       day_format: dd
       year_format: 'y'
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_dewey_classification:
     type: string
@@ -115,7 +115,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 21
+    weight: 22
     region: content
   field_edition:
     type: string
@@ -123,7 +123,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
   field_edtf_date_created:
     type: edtf_default
@@ -135,7 +135,7 @@ content:
       day_format: dd
       year_format: 'y'
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_edtf_date_issued:
     type: edtf_default
@@ -147,7 +147,7 @@ content:
       day_format: dd
       year_format: 'y'
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_extent:
     type: string
@@ -155,7 +155,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 16
+    weight: 17
     region: content
   field_frequency:
     type: entity_reference_label
@@ -163,7 +163,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
   field_genre:
     type: entity_reference_label
@@ -171,7 +171,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 14
+    weight: 15
     region: content
   field_geographic_subject:
     type: entity_reference_label
@@ -179,7 +179,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 18
+    weight: 19
     region: content
   field_host:
     type: string
@@ -187,7 +187,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 29
+    weight: 30
     region: content
   field_identifier:
     type: string
@@ -195,7 +195,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 23
+    weight: 24
     region: content
   field_isbn:
     type: string
@@ -203,7 +203,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 24
+    weight: 25
     region: content
   field_language:
     type: entity_reference_label
@@ -211,7 +211,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 12
+    weight: 13
     region: content
   field_lcc_classification:
     type: string
@@ -219,7 +219,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 22
+    weight: 23
     region: content
   field_linked_agent:
     type: typed_relation_default
@@ -235,7 +235,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 30
+    weight: 31
     region: content
   field_mode_of_issuance:
     type: entity_reference_label
@@ -243,14 +243,14 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 11
+    weight: 12
     region: content
   field_note:
     type: text_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 11
     region: content
   field_other_links:
     type: link
@@ -262,7 +262,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 44
+    weight: 35
     region: content
   field_physical_form:
     type: entity_reference_label
@@ -270,7 +270,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 15
+    weight: 16
     region: content
   field_pid:
     type: string
@@ -278,13 +278,21 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 32
+    weight: 33
     region: content
   field_place_published:
     type: string
     label: inline
     settings:
       link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_place_published_country:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
     third_party_settings: {  }
     weight: 2
     region: content
@@ -294,7 +302,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 13
+    weight: 14
     region: content
   field_rights:
     type: entity_reference_label
@@ -302,7 +310,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 31
+    weight: 32
     region: content
   field_series:
     type: string
@@ -310,7 +318,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 25
+    weight: 26
     region: content
   field_subject:
     type: entity_reference_label
@@ -318,7 +326,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 17
+    weight: 18
     region: content
   field_subjects_name:
     type: entity_reference_label
@@ -326,14 +334,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 19
+    weight: 20
     region: content
   field_table_of_contents:
     type: text_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 9
+    weight: 10
     region: content
   field_temporal_subject:
     type: entity_reference_label
@@ -341,7 +349,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 20
+    weight: 21
     region: content
   field_title_preceding:
     type: string
@@ -349,7 +357,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 27
+    weight: 28
     region: content
   field_title_succeeding:
     type: string
@@ -357,19 +365,18 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 28
+    weight: 29
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 33
+    weight: 34
     region: content
 hidden:
   display_media_entity_view_3: true
   display_media_thumbnail: true
   field_gemini_uri: true
   field_model: true
-  field_place_published_country: true
   field_viewer_override: true
   field_weight: true
   islandora_fits_checksum: true

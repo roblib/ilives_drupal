@@ -157,11 +157,6 @@ content:
     third_party_settings: {  }
     weight: 17
     region: content
-  field_gemini_uri:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 42
-    region: content
   field_genre:
     type: entity_reference_label
     label: above
@@ -305,6 +300,7 @@ hidden:
   display_media_entity_view_3: true
   display_media_thumbnail: true
   field_additional_works: true
+  field_gemini_uri: true
   field_host: true
   field_model: true
   field_other_links: true
