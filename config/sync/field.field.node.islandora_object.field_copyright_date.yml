@@ -14,7 +14,7 @@ field_name: field_copyright_date
 entity_type: node
 bundle: islandora_object
 label: 'Copyright Date'
-description: 'Date of copyright of the resource.'
+description: 'Date of copyright of the resource, if such a date is explicitly given.'
 required: false
 translatable: false
 default_value: {  }

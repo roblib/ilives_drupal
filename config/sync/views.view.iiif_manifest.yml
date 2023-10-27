@@ -448,6 +448,11 @@ display:
           iiif_tile_field:
             field_media_file: field_media_file
             field_media_image: field_media_image
+          iiif_ocr_file_field:
+            field_media_file: 0
+            field_media_image: 0
+          structured_text_term: '57'
+          structured_text_term_uri: 'https://discoverygarden.ca/use#hocr'
       row:
         type: data_field
         options:
@@ -589,6 +594,11 @@ display:
           iiif_tile_field:
             field_media_file: field_media_file
             field_media_image: field_media_image
+          iiif_ocr_file_field:
+            field_media_file: 0
+            field_media_image: 0
+          structured_text_term: '57'
+          structured_text_term_uri: 'https://discoverygarden.ca/use#hocr'
       row:
         type: data_field
         options:
@@ -621,7 +631,18 @@ display:
           plugin_id: standard
           required: false
       display_description: ''
-      display_extenders: {  }
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
       path: node/%node/manifest
     cache_metadata:
       max-age: -1
@@ -646,10 +667,14 @@ display:
       style:
         type: iiif_manifest
         options:
-          uses_fields: false
           iiif_tile_field:
             field_media_file: field_media_file
             field_media_image: field_media_image
+          iiif_ocr_file_field:
+            field_media_file: 0
+            field_media_image: 0
+          structured_text_term: '57'
+          structured_text_term_uri: 'https://discoverygarden.ca/use#hocr'
       row:
         type: data_field
         options:
@@ -697,10 +722,14 @@ display:
       style:
         type: iiif_manifest
         options:
-          uses_fields: false
           iiif_tile_field:
             field_media_file: field_media_file
             field_media_image: field_media_image
+          iiif_ocr_file_field:
+            field_media_file: 0
+            field_media_image: 0
+          structured_text_term: '57'
+          structured_text_term_uri: 'https://discoverygarden.ca/use#hocr'
       row:
         type: data_field
         options:
@@ -874,10 +903,14 @@ display:
       style:
         type: iiif_manifest
         options:
-          uses_fields: false
           iiif_tile_field:
             field_media_file: field_media_file
             field_media_image: field_media_image
+          iiif_ocr_file_field:
+            field_media_file: 0
+            field_media_image: 0
+          structured_text_term: '57'
+          structured_text_term_uri: 'https://discoverygarden.ca/use#hocr'
       row:
         type: data_field
         options:

@@ -11,8 +11,8 @@ id: node.islandora_object.field_pid
 field_name: field_pid
 entity_type: node
 bundle: islandora_object
-label: PID
-description: 'Legacy PID of this object in Islandora 7.x (applies to migrated objects only). (Will be used in URL alias if present)'
+label: 'Legacy PID'
+description: 'PID of this object in Islandora 7.x (applies to migrated objects only, do NOT create new values here). PID will be used in URL alias if present.'
 required: false
 translatable: false
 default_value: {  }

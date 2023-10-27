@@ -54,18 +54,18 @@ third_party_settings:
         - field_member_of
         - field_weight
         - field_viewer_override
-        - langcode
-        - translation
         - path
-        - status
-        - promote
         - uid
         - created
+        - langcode
+        - translation
+        - status
+        - promote
         - sticky
       label: System
       region: content
       parent_name: ''
-      weight: 12
+      weight: 10
       format_type: details
       format_settings:
         classes: ''
@@ -92,9 +92,9 @@ third_party_settings:
         required_fields: true
     group_identifiers:
       children:
-        - field_identifier
-        - field_isbn
         - field_pid
+        - field_isbn
+        - field_identifier
       label: Identifiers
       region: content
       parent_name: ''
@@ -130,7 +130,7 @@ third_party_settings:
       label: 'Descriptions and Notes'
       region: content
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: details
       format_settings:
         classes: ''
@@ -177,7 +177,6 @@ third_party_settings:
         - field_place_published_country
         - field_place_published
         - field_edtf_date_issued
-        - field_edtf_date_created
         - field_copyright_date
         - field_edition
         - group_publication_details
@@ -203,7 +202,7 @@ third_party_settings:
       label: 'Type and Extent'
       region: content
       parent_name: ''
-      weight: 4
+      weight: 3
       format_type: details
       format_settings:
         classes: ''
@@ -256,7 +255,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 46
+    weight: 42
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -366,7 +365,7 @@ content:
     third_party_settings: {  }
   field_identifier:
     type: string_textfield
-    weight: 22
+    weight: 26
     region: content
     settings:
       size: 60
@@ -374,7 +373,7 @@ content:
     third_party_settings: {  }
   field_isbn:
     type: string_textfield
-    weight: 23
+    weight: 25
     region: content
     settings:
       size: 60
@@ -419,14 +418,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_mode_of_issuance:
-    type: entity_reference_autocomplete
+    type: options_buttons
     weight: 31
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_model:
     type: options_select
@@ -448,7 +443,7 @@ content:
     region: content
     settings:
       placeholder_url: ''
-      placeholder_title: ''
+      placeholder_title: "e.g. View this item in the Robertson Library's catalogue"
     third_party_settings: {  }
   field_physical_form:
     type: entity_reference_autocomplete
@@ -579,27 +574,27 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 40
+    weight: 43
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 42
+    weight: 40
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 44
+    weight: 46
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 43
+    weight: 45
     region: content
     settings:
       display_label: true
@@ -620,13 +615,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 41
+    weight: 44
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 45
+    weight: 41
     region: content
     settings:
       match_operator: CONTAINS

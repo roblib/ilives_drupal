@@ -12,7 +12,7 @@ field_name: field_other_links
 entity_type: node
 bundle: islandora_object
 label: 'Other Links'
-description: "Other links, e.g. Link to the catalogue (text should read: <i>View this item in the Robertson Library's catalogue.</i>"
+description: "<b>Link to the catalogue. Link Text should read: <i>View this item in the Robertson Library's catalogue.</i></b>"
 required: false
 translatable: false
 default_value: {  }

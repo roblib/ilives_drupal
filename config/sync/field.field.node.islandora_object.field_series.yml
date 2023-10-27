@@ -10,7 +10,7 @@ field_name: field_series
 entity_type: node
 bundle: islandora_object
 label: 'Series Information'
-description: 'If the book is part of a series, enter series information here.'
+description: "If the book is part of a series, enter a series statement here. May include the item's place within the series. e.g. <i>Mercury series. no. 42</i>"
 required: false
 translatable: false
 default_value: {  }
