@@ -132,7 +132,7 @@
 	    "drupal/matomo": {
 	        "https://www.drupal.org/project/matomo/issues/3363521": "https://www.drupal.org/files/issues/2023-06-29/matomo-3363521-7.patch"
 	    },
-	    "drupal/islandora": {
+	    "islandora/islandora": {
 	        "OCR from media: https://github.com/Islandora/islandora/pull/953": "assets/patches/hocr.patch"
 	    }
 	}

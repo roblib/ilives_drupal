@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8a57de0bb235cb28790058f92b0da6b6",
+    "content-hash": "784a397e6ee89e06695ecb005df61f72",
     "packages": [
         {
             "name": "academicpuma/citeproc-php",
@@ -3861,17 +3861,17 @@
         },
         {
             "name": "drupal/leaflet",
-            "version": "10.2.2",
+            "version": "10.2.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/leaflet.git",
-                "reference": "10.2.2"
+                "reference": "10.2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/leaflet-10.2.2.zip",
-                "reference": "10.2.2",
-                "shasum": "ed8d2d5990b11f8f58615c507f43456a74bf6ad4"
+                "url": "https://ftp.drupal.org/files/projects/leaflet-10.2.3.zip",
+                "reference": "10.2.3",
+                "shasum": "0d29b11403511492370895341e39b51255445d1d"
             },
             "require": {
                 "drupal/core": "^9 || ^10",
@@ -3880,8 +3880,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "10.2.2",
-                    "datestamp": "1698092751",
+                    "version": "10.2.3",
+                    "datestamp": "1698436423",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
