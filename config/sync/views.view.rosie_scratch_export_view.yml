@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_extent
+    - field.storage.node.field_note
     - field.storage.node.field_pid
     - taxonomy.vocabulary.islandora_models
   content:
@@ -14,6 +14,7 @@ dependencies:
     - rest
     - serialization
     - taxonomy
+    - text
     - user
     - views_data_export
 id: rosie_scratch_export_view
@@ -30,7 +31,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Admin Books'
+      title: 'Export Useful Info View'
       fields:
         nid:
           id: nid
@@ -161,10 +162,10 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_extent:
-          id: field_extent
-          table: node__field_extent
-          field: field_extent
+        field_note:
+          id: field_note
+          table: node__field_note
+          field: field_note
           relationship: none
           group_type: group
           admin_label: ''
@@ -211,18 +212,17 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
+          type: text_default
+          settings: {  }
           group_column: value
           group_columns: {  }
-          group_rows: true
+          group_rows: false
           delta_limit: 0
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ', '
+          separator: '|'
           field_api_classes: false
       pager:
         type: mini
@@ -327,6 +327,45 @@ display:
           hierarchy: false
           limit: true
           error_message: true
+        field_note_value:
+          id: field_note_value
+          table: node__field_note
+          field: field_note_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: string
+          operator: 'not empty'
+          value: ''
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       style:
         type: default
       row:
@@ -359,7 +398,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_extent'
+        - 'config:field.storage.node.field_note'
         - 'config:field.storage.node.field_pid'
   data_export_1:
     id: data_export_1
@@ -393,7 +432,7 @@ display:
           category_fallback: ''
           category_facets: {  }
           category_facets_concat_separator: ', '
-      path: admin-export
+      path: rosie-export
       displays:
         page_1: page_1
         default: '0'
@@ -416,7 +455,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_extent'
+        - 'config:field.storage.node.field_note'
         - 'config:field.storage.node.field_pid'
   page_1:
     id: page_1
@@ -449,7 +488,7 @@ display:
           category_fallback: ''
           category_facets: {  }
           category_facets_concat_separator: ', '
-      path: admin-view
+      path: rosie
     cache_metadata:
       max-age: -1
       contexts:
@@ -461,5 +500,5 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_extent'
+        - 'config:field.storage.node.field_note'
         - 'config:field.storage.node.field_pid'

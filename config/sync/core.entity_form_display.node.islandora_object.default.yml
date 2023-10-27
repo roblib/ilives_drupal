@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.islandora_object.field_copyright_date
     - field.field.node.islandora_object.field_dewey_classification
     - field.field.node.islandora_object.field_edition
-    - field.field.node.islandora_object.field_edtf_date_created
     - field.field.node.islandora_object.field_edtf_date_issued
     - field.field.node.islandora_object.field_extent
     - field.field.node.islandora_object.field_frequency
@@ -52,8 +51,10 @@ third_party_settings:
   field_group:
     group_structure:
       children:
-        - langcode
+        - field_member_of
         - field_weight
+        - field_viewer_override
+        - langcode
         - translation
         - path
         - status
@@ -64,7 +65,7 @@ third_party_settings:
       label: System
       region: content
       parent_name: ''
-      weight: 28
+      weight: 12
       format_type: details
       format_settings:
         classes: ''
@@ -75,52 +76,20 @@ third_party_settings:
     group_required:
       children:
         - title
-        - field_model
-      label: Required
-      region: content
-      parent_name: ''
-      weight: 0
-      format_type: details
-      format_settings:
-        classes: ''
-        id: ''
-        open: true
-        description: 'The title recorded here will be the main display title used within the system, and is limited to 255 characters. If your title is longer, enter a truncated version that will differentiate this resource from others in displays. Full titles longer than 255 characters may be optionally recorded below.'
-        required_fields: true
-    group_relationships:
-      children:
-        - field_member_of
-      label: Relationships
+        - field_alt_title
+        - field_linked_agent
+      label: 'Title and Contributors'
       region: content
       parent_name: ''
       weight: 1
       format_type: details
       format_settings:
         classes: ''
+        show_empty_fields: false
         id: ''
-        open: false
-        description: 'Relationships between this resource and other resources'
+        open: true
+        description: ''
         required_fields: true
-        weight: 0
-        formatter: closed
-        direction: vertical
-    group_title_details:
-      children:
-        - field_alt_title
-      label: 'Title Details'
-      region: content
-      parent_name: ''
-      weight: 2
-      format_type: details
-      format_settings:
-        classes: ''
-        id: ''
-        open: false
-        description: 'More specific title fields that are needed less frequently'
-        required_fields: true
-        weight: 0
-        formatter: closed
-        direction: vertical
     group_identifiers:
       children:
         - field_identifier
@@ -129,7 +98,7 @@ third_party_settings:
       label: Identifiers
       region: content
       parent_name: ''
-      weight: 19
+      weight: 7
       format_type: details
       format_settings:
         classes: ''
@@ -141,46 +110,34 @@ third_party_settings:
       children:
         - field_mode_of_issuance
         - field_frequency
-      label: 'Publication Details'
+      label: Issuance
       region: content
-      parent_name: ''
+      parent_name: group_origin
       weight: 10
       format_type: details
       format_settings:
         classes: ''
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
-        required_fields: true
-    group_additional_date_types:
-      children:
-        - field_copyright_date
-      label: 'Additional Date Types'
-      region: content
-      parent_name: ''
-      weight: 8
-      format_type: details
-      format_settings:
-        classes: ''
-        id: ''
-        open: false
-        description: 'Less-frequently needed fields for specific types of dates'
         required_fields: true
     group_specific_description_field:
       children:
         - field_abstract
         - field_table_of_contents
         - field_note
-      label: 'Specific Description Fields'
+      label: 'Descriptions and Notes'
       region: content
       parent_name: ''
-      weight: 11
+      weight: 3
       format_type: details
       format_settings:
         classes: ''
+        show_empty_fields: false
         id: ''
         open: false
-        description: 'Fields that capture description elements of specific types'
+        description: ''
         required_fields: true
     group_classification_:
       children:
@@ -189,7 +146,7 @@ third_party_settings:
       label: 'Classification '
       region: content
       parent_name: ''
-      weight: 18
+      weight: 6
       format_type: details
       format_settings:
         classes: ''
@@ -203,27 +160,89 @@ third_party_settings:
         - field_geographic_subject
         - field_subjects_name
         - field_temporal_subject
-        - group_geographic_coordinates
-      label: 'Specific Subject Types'
+      label: Subjects
       region: content
       parent_name: ''
-      weight: 17
+      weight: 5
       format_type: details
       format_settings:
         classes: ''
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
         required_fields: true
-    group_geographic_coordinates:
-      children: {  }
-      label: 'Geographic Coordinates'
+    group_origin:
+      children:
+        - field_place_published_country
+        - field_place_published
+        - field_edtf_date_issued
+        - field_edtf_date_created
+        - field_copyright_date
+        - field_edition
+        - group_publication_details
+      label: 'Publication Details'
       region: content
-      parent_name: group_specific_subject_types
-      weight: 23
+      parent_name: ''
+      weight: 2
       format_type: details
       format_settings:
         classes: ''
+        show_empty_fields: true
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_type_and_extent:
+      children:
+        - field_resource_type
+        - field_physical_form
+        - field_extent
+        - field_language
+        - field_genre
+      label: 'Type and Extent'
+      region: content
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_related_bibliographic_item:
+      children:
+        - field_other_links
+        - field_series
+        - field_additional_works
+        - field_title_preceding
+        - field_title_succeeding
+        - field_host
+      label: 'Related Bibliographic Items'
+      region: content
+      parent_name: ''
+      weight: 8
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_rights:
+      children:
+        - field_rights
+      label: Rights
+      region: content
+      parent_name: ''
+      weight: 9
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
@@ -237,7 +256,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 42
+    weight: 46
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -251,7 +270,7 @@ content:
     third_party_settings: {  }
   field_additional_works:
     type: string_textfield
-    weight: 21
+    weight: 13
     region: content
     settings:
       size: 60
@@ -259,7 +278,7 @@ content:
     third_party_settings: {  }
   field_alt_title:
     type: string_textfield
-    weight: 9
+    weight: 3
     region: content
     settings:
       size: 60
@@ -267,7 +286,7 @@ content:
     third_party_settings: {  }
   field_copyright_date:
     type: edtf_default
-    weight: 14
+    weight: 8
     region: content
     settings:
       strict_dates: false
@@ -290,15 +309,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_edtf_date_created:
-    type: edtf_default
-    weight: 7
-    region: content
-    settings:
-      strict_dates: false
-      intervals: false
-      sets: false
-    third_party_settings: {  }
   field_edtf_date_issued:
     type: edtf_default
     weight: 6
@@ -310,7 +320,7 @@ content:
     third_party_settings: {  }
   field_extent:
     type: string_textfield
-    weight: 16
+    weight: 8
     region: content
     settings:
       size: 60
@@ -328,7 +338,7 @@ content:
     third_party_settings: {  }
   field_genre:
     type: entity_reference_autocomplete
-    weight: 14
+    weight: 10
     region: content
     settings:
       match_operator: CONTAINS
@@ -348,7 +358,7 @@ content:
     third_party_settings: {  }
   field_host:
     type: string_textfield
-    weight: 24
+    weight: 16
     region: content
     settings:
       size: 60
@@ -356,7 +366,7 @@ content:
     third_party_settings: {  }
   field_identifier:
     type: string_textfield
-    weight: 18
+    weight: 22
     region: content
     settings:
       size: 60
@@ -364,7 +374,7 @@ content:
     third_party_settings: {  }
   field_isbn:
     type: string_textfield
-    weight: 19
+    weight: 23
     region: content
     settings:
       size: 60
@@ -372,7 +382,7 @@ content:
     third_party_settings: {  }
   field_language:
     type: entity_reference_autocomplete
-    weight: 12
+    weight: 9
     region: content
     settings:
       match_operator: CONTAINS
@@ -390,7 +400,7 @@ content:
     third_party_settings: {  }
   field_linked_agent:
     type: typed_relation_default
-    weight: 3
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
@@ -400,7 +410,7 @@ content:
     third_party_settings: {  }
   field_member_of:
     type: entity_reference_autocomplete
-    weight: 33
+    weight: 37
     region: content
     settings:
       match_operator: CONTAINS
@@ -420,7 +430,7 @@ content:
     third_party_settings: {  }
   field_model:
     type: options_select
-    weight: 1
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -434,7 +444,7 @@ content:
     third_party_settings: {  }
   field_other_links:
     type: link_default
-    weight: 26
+    weight: 11
     region: content
     settings:
       placeholder_url: ''
@@ -442,7 +452,7 @@ content:
     third_party_settings: {  }
   field_physical_form:
     type: entity_reference_autocomplete
-    weight: 15
+    weight: 7
     region: content
     settings:
       match_operator: CONTAINS
@@ -452,7 +462,7 @@ content:
     third_party_settings: {  }
   field_pid:
     type: string_textfield
-    weight: 21
+    weight: 24
     region: content
     settings:
       size: 60
@@ -478,13 +488,13 @@ content:
     third_party_settings: {  }
   field_resource_type:
     type: options_select
-    weight: 13
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   field_rights:
     type: entity_reference_autocomplete
-    weight: 25
+    weight: 10
     region: content
     settings:
       match_operator: CONTAINS
@@ -494,7 +504,7 @@ content:
     third_party_settings: {  }
   field_series:
     type: string_textfield
-    weight: 20
+    weight: 12
     region: content
     settings:
       size: 60
@@ -540,7 +550,7 @@ content:
     third_party_settings: {  }
   field_title_preceding:
     type: string_textfield
-    weight: 22
+    weight: 14
     region: content
     settings:
       size: 60
@@ -548,7 +558,7 @@ content:
     third_party_settings: {  }
   field_title_succeeding:
     type: string_textfield
-    weight: 23
+    weight: 15
     region: content
     settings:
       size: 60
@@ -556,67 +566,67 @@ content:
     third_party_settings: {  }
   field_viewer_override:
     type: options_select
-    weight: 27
+    weight: 39
     region: content
     settings: {  }
     third_party_settings: {  }
   field_weight:
     type: number
-    weight: 35
+    weight: 38
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 34
+    weight: 40
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 37
+    weight: 42
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 40
+    weight: 44
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 39
+    weight: 43
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 43
+    weight: 47
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 2
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 36
+    weight: 41
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 41
+    weight: 45
     region: content
     settings:
       match_operator: CONTAINS

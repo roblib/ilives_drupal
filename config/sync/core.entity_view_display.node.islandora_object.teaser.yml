@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.islandora_object.field_copyright_date
     - field.field.node.islandora_object.field_dewey_classification
     - field.field.node.islandora_object.field_edition
-    - field.field.node.islandora_object.field_edtf_date_created
     - field.field.node.islandora_object.field_edtf_date_issued
     - field.field.node.islandora_object.field_extent
     - field.field.node.islandora_object.field_frequency
@@ -95,7 +94,6 @@ hidden:
   field_copyright_date: true
   field_dewey_classification: true
   field_edition: true
-  field_edtf_date_created: true
   field_extent: true
   field_frequency: true
   field_gemini_uri: true

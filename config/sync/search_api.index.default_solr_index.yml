@@ -3,9 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_abstract
     - field.storage.node.field_alt_title
-    - field.storage.node.field_edtf_date_created
     - field.storage.node.field_member_of
     - field.storage.node.field_dewey_classification
     - field.storage.node.field_edition
@@ -17,11 +15,12 @@ dependencies:
     - field.storage.node.field_physical_form
     - field.storage.node.field_pid
     - field.storage.node.field_resource_type
+    - field.storage.node.field_tags
+    - field.storage.node.field_abstract
     - field.storage.node.field_geographic_subject
     - field.storage.node.field_subjects_name
     - field.storage.node.field_temporal_subject
     - field.storage.node.field_subject
-    - field.storage.node.field_tags
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.search_index
   module:
@@ -158,14 +157,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_edition
-  field_edtf_date_created:
-    label: 'Date Created'
-    datasource_id: 'entity:node'
-    property_path: field_edtf_date_created
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_edtf_date_created
   field_extent:
     label: Extent
     datasource_id: 'entity:node'
@@ -455,6 +446,7 @@ processor_settings:
     weights:
       preprocess_index: -6
       preprocess_query: -4
+  custom_value: {  }
   edtf_year_only:
     fields:
       islandora_object|field_copyright_date: islandora_object|field_copyright_date

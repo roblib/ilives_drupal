@@ -12,7 +12,7 @@ field_name: field_place_published
 entity_type: node
 bundle: islandora_object
 label: 'Place Published'
-description: ''
+description: 'Enter the place (usually city) of publication.'
 required: false
 translatable: true
 default_value: {  }

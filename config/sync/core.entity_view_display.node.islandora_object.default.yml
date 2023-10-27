@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.islandora_object.field_copyright_date
     - field.field.node.islandora_object.field_dewey_classification
     - field.field.node.islandora_object.field_edition
-    - field.field.node.islandora_object.field_edtf_date_created
     - field.field.node.islandora_object.field_edtf_date_issued
     - field.field.node.islandora_object.field_extent
     - field.field.node.islandora_object.field_frequency
@@ -124,18 +123,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 7
-    region: content
-  field_edtf_date_created:
-    type: edtf_default
-    label: inline
-    settings:
-      date_separator: dash
-      date_order: big_endian
-      month_format: mm
-      day_format: dd
-      year_format: 'y'
-    third_party_settings: {  }
-    weight: 5
     region: content
   field_edtf_date_issued:
     type: edtf_default

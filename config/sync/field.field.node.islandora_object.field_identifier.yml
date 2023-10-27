@@ -11,8 +11,8 @@ id: node.islandora_object.field_identifier
 field_name: field_identifier
 entity_type: node
 bundle: islandora_object
-label: Identifier
-description: ''
+label: 'External Identifier'
+description: 'Any non-local identifiers may be added here. For example, the accession number within an external archive or database.'
 required: false
 translatable: false
 default_value: {  }

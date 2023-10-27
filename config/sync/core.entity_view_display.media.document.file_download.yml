@@ -27,7 +27,7 @@ content:
     region: content
   field_media_document:
     type: filehash_table
-    label: visually_hidden
+    label: inline
     settings:
       algo: sha1
       use_description_as_link_text: true

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_copyright_date
     - field.storage.node.field_edtf_date_issued
     - field.storage.node.field_resource_type
     - search_api.index.default_solr_index
@@ -347,7 +348,7 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
@@ -359,7 +360,7 @@ display:
             day_format: dd
             year_format: 'y'
             relationship: none
-            field_rendering: 0
+            field_rendering: 1
             fieldsets:
               - more
               - admin_label
@@ -432,6 +433,144 @@ display:
           separator: ', '
           field_api_classes: false
           field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+        field_copyright_date:
+          id: field_copyright_date
+          table: search_api_datasource_default_solr_index_entity_node
+          field: field_copyright_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
+          label: 'Copyright Date'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: field__item
+          element_label_type: ''
+          element_label_class: field__label
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: edtf_default
+          settings:
+            date_separator: dash
+            date_order: big_endian
+            month_format: mm
+            day_format: dd
+            year_format: 'y'
+            relationship: none
+            field_rendering: 0
+            fieldsets:
+              - more
+              - admin_label
+            custom_label: 1
+            label: 'Copyright Date'
+            element_label_colon: 1
+            exclude: 0
+            element_type_enable: 0
+            element_type: ''
+            element_class_enable: 0
+            element_class: ''
+            element_label_type_enable: 0
+            element_label_type: ''
+            element_label_class_enable: 0
+            element_label_class: ''
+            element_wrapper_type_enable: 0
+            element_wrapper_type: ''
+            element_wrapper_class_enable: 0
+            element_wrapper_class: ''
+            element_default_classes: 1
+            alter:
+              alter_text: 0
+              text: ''
+              make_link: 0
+              path: ''
+              absolute: 0
+              replace_spaces: 0
+              external: 0
+              path_case: none
+              link_class: ''
+              alt: ''
+              rel: ''
+              prefix: ''
+              suffix: ''
+              target: ''
+              trim: 0
+              max_length: '0'
+              word_boundary: 1
+              ellipsis: 1
+              more_link: 0
+              more_link_text: ''
+              more_link_path: ''
+              html: 0
+              strip_tags: 0
+              preserve_tags: ''
+              trim_whitespace: 0
+              nl2br: 0
+            empty: ''
+            empty_zero: 0
+            hide_empty: 1
+            hide_alter_empty: 1
+            group_rows: 1
+            multi_type: separator
+            separator: ', '
+            delta_limit: '0'
+            delta_offset: '0'
+            delta_reversed: 0
+            delta_first_last: 0
+            click_sort_column: value
+            type: edtf_default
+            field_api_classes: 0
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: false
           fallback_handler: search_api
           fallback_options:
             link_to_item: false
@@ -810,6 +949,7 @@ display:
         - 'url.query_args:sort_order'
         - 'user.node_grants:view'
       tags:
+        - 'config:field.storage.node.field_copyright_date'
         - 'config:field.storage.node.field_edtf_date_issued'
         - 'config:field.storage.node.field_resource_type'
         - 'config:search_api.index.default_solr_index'
@@ -913,6 +1053,7 @@ display:
         - 'url.query_args:sort_order'
         - 'user.node_grants:view'
       tags:
+        - 'config:field.storage.node.field_copyright_date'
         - 'config:field.storage.node.field_edtf_date_issued'
         - 'config:field.storage.node.field_resource_type'
         - 'config:search_api.index.default_solr_index'
@@ -1012,6 +1153,7 @@ display:
         - 'url.query_args:sort_order'
         - 'user.node_grants:view'
       tags:
+        - 'config:field.storage.node.field_copyright_date'
         - 'config:field.storage.node.field_edtf_date_issued'
         - 'config:field.storage.node.field_resource_type'
         - 'config:search_api.index.default_solr_index'
