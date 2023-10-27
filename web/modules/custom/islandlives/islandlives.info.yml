@@ -1,0 +1,9 @@
+name: IslandLives customization module
+description: Hooks and custom elements for IslandLives.
+package: Custom
+
+type: module
+core_version_requirement: ^9.4 || ^10
+
+dependencies: 
+  - pathauto:pathauto

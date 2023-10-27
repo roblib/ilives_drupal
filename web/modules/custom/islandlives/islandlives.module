@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Custom hooks for Islandlives site.
+ */
+
+use Drupal\pathauto\PathautoPatternInterface;
+
+/**
+ * Implements hook_pathauto_pattern_alter().
+ */
+function islandlives_pathauto_pattern_alter(PathautoPatternInterface $pattern, array $context) {
+  // Only act on the repo_item_content pattern.
+  if ($pattern->id() == 'repo_item_content') {
+    // If node has no PID...
+    $node = $context['data']['node'];
+    $pid = $node->get('field_pid')->value;
+    if ($pid == NULL) {
+      // Replace the PID with the NID in the alias.
+      $new_pattern = preg_replace('/\[node:field_pid\]/', '[node:nid]', $pattern->getPattern());
+      $pattern->setPattern($new_pattern);
+    }
+  }
+}
