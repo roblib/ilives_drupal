@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b65c2906399d2bb8167e921efb08965c",
+    "content-hash": "8a57de0bb235cb28790058f92b0da6b6",
     "packages": [
         {
             "name": "academicpuma/citeproc-php",
@@ -5030,17 +5030,17 @@
         },
         {
             "name": "drupal/transliterate_filenames",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/transliterate_filenames.git",
-                "reference": "2.0.1"
+                "reference": "2.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/transliterate_filenames-2.0.1.zip",
-                "reference": "2.0.1",
-                "shasum": "bd905924e7b0f2b960267be1a7f65c8830e1e424"
+                "url": "https://ftp.drupal.org/files/projects/transliterate_filenames-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "204bcd65f79eeb6c4a43b3c63d0bbd325edfb127"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10"
@@ -5048,8 +5048,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.1",
-                    "datestamp": "1659789907",
+                    "version": "2.0.2",
+                    "datestamp": "1698338671",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7468,7 +7468,7 @@
             ],
             "support": {
                 "issues": "https://github.com/mjordan/islandora_workbench_integration/issues",
-                "source": "https://github.com/mjordan/islandora_workbench_integration/tree/main"
+                "source": "https://github.com/mjordan/islandora_workbench_integration/tree/D10"
             },
             "time": "2023-08-28T20:15:05+00:00"
         },
@@ -12384,7 +12384,7 @@
     "stability-flags": {
         "drupal/bibcite": 10,
         "drupal/citation_select": 10,
-        "drupal/flysystem": 10,
+        "drupal/flysystem": 5,
         "drupal/rest_oai_pmh": 10,
         "drupal/term_merge": 10,
         "drupal/title_length": 5,
@@ -12396,7 +12396,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.4 || ^8"
+        "php": "^8"
     },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
