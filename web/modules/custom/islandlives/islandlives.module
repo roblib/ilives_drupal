@@ -11,8 +11,8 @@ use Drupal\pathauto\PathautoPatternInterface;
  * Implements hook_pathauto_pattern_alter().
  */
 function islandlives_pathauto_pattern_alter(PathautoPatternInterface $pattern, array $context) {
-  // Only act on the repo_item_content pattern.
-  if ($pattern->id() == 'repo_item_content') {
+  // Only act on the repository_items pattern.
+  if ($pattern->id() == 'repository_items') {
     // If node has no PID...
     $node = $context['data']['node'];
     $pid = $node->get('field_pid')->value;
