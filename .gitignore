@@ -1,5 +1,7 @@
 vendor
 web
+web/modules/*
+!web/modules/custom
 .idea
 config/sync/.htaccess
 vagrant
