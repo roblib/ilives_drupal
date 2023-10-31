@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bfb02109014bbd7552826bffcfd145cc",
+    "content-hash": "bd054c9728400645baf4e6a5d3b422d8",
     "packages": [
         {
             "name": "academicpuma/citeproc-php",
@@ -3005,6 +3005,67 @@
             "homepage": "https://www.drupal.org/project/file_replace",
             "support": {
                 "source": "https://git.drupalcode.org/project/file_replace"
+            }
+        },
+        {
+            "name": "drupal/filefield_paths",
+            "version": "1.0.0-beta7",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/filefield_paths.git",
+                "reference": "8.x-1.0-beta7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/filefield_paths-8.x-1.0-beta7.zip",
+                "reference": "8.x-1.0-beta7",
+                "shasum": "666be9380370aff8c01ad0522508df239d3cfdc2"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10"
+            },
+            "require-dev": {
+                "drupal/ctools": "*",
+                "drupal/pathauto": "*",
+                "drupal/redirect": "*",
+                "drupal/token": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta7",
+                    "datestamp": "1690204901",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Deciphered",
+                    "homepage": "https://www.drupal.org/user/103796"
+                },
+                {
+                    "name": "voleger",
+                    "homepage": "https://www.drupal.org/user/3260314"
+                }
+            ],
+            "description": "File (Field) Paths. Adds improved Token based file sorting and renaming functionalities.",
+            "homepage": "https://www.drupal.org/project/filefield_paths",
+            "keywords": [
+                "drupal",
+                "field",
+                "file",
+                "path",
+                "token"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/filefield_paths"
             }
         },
         {
@@ -12384,6 +12445,7 @@
     "stability-flags": {
         "drupal/bibcite": 10,
         "drupal/citation_select": 10,
+        "drupal/filefield_paths": 10,
         "drupal/flysystem": 5,
         "drupal/rest_oai_pmh": 10,
         "drupal/term_merge": 10,

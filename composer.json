@@ -41,6 +41,7 @@
         "drupal/field_group": "^3",
         "drupal/field_permissions": "^1",
         "drupal/field_report": "^2.1",
+        "drupal/filefield_paths": "^1.0@beta",
         "drupal/flysystem": "^2.1.0@RC",
         "drupal/hal": "^2.0",
         "drupal/leaflet": "^10.1",

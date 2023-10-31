@@ -55,13 +55,7 @@ third_party_settings:
         - field_weight
         - field_viewer_override
         - path
-        - uid
-        - created
-        - langcode
-        - translation
         - status
-        - promote
-        - sticky
       label: System
       region: content
       parent_name: ''
@@ -253,12 +247,6 @@ targetEntityType: node
 bundle: islandora_object
 mode: default
 content:
-  created:
-    type: datetime_timestamp
-    weight: 42
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_abstract:
     type: text_textarea
     weight: 15
@@ -572,36 +560,15 @@ content:
     settings:
       placeholder: ''
     third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 43
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
   path:
     type: path
     weight: 40
     region: content
     settings: {  }
     third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    weight: 46
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
     weight: 45
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    weight: 47
     region: content
     settings:
       display_label: true
@@ -614,19 +581,10 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  translation:
-    weight: 44
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 41
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  created: true
+  langcode: true
+  promote: true
+  sticky: true
+  translation: true
+  uid: true

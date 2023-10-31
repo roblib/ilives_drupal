@@ -49,7 +49,7 @@ reactions:
         unique: 1
         context_id: mirador_block_multipaged_items
         context_mapping: {  }
-        iiif_manifest_url: '/node/[node:nid]/book-manifest-service'
+        iiif_manifest_url: '/node/[node:nid]/book-manifest-original'
         third_party_settings: {  }
       0c0475bb-f604-4427-ad64-762b00754220:
         uuid: 0c0475bb-f604-4427-ad64-762b00754220
