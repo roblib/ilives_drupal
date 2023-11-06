@@ -18,7 +18,7 @@ taxonomies:
       vid: conference
       tid: '539'
       langcode: en
-      name: 'Celebration and Unveiling of Monument to the Memory of the Brudenell Pioneers (1903 Brudenell, P.E.I.)'
+      name: 'Celebration and Unveiling of Monument to the Memory of the Brudenell Pioneers (1903 : Brudenell, P.E.I.)'
       description__value: null
       description__format: null
       weight: '0'
@@ -29,7 +29,7 @@ taxonomies:
       vid: conference
       tid: '546'
       langcode: en
-      name: 'Congrès Pédagogique des Instituteurs Acadiens (1920 Miscouche, P.E.I.)'
+      name: 'Congrès Pédagogique des Instituteurs Acadiens (1920 : Miscouche, P.E.I.)'
       description__value: null
       description__format: null
       weight: '0'
@@ -40,7 +40,7 @@ taxonomies:
       vid: conference
       tid: '614'
       langcode: en
-      name: "Convention nationale Acadienne de L'Ile-du-Prince Edouard (le 1er août 1951 St. Jacques d'Egmont Bay)"
+      name: "Convention nationale Acadienne de L'Ile-du-Prince Edouard (le 1er août 1951 : St. Jacques d'Egmont Bay)"
       description__value: null
       description__format: null
       weight: '0'
@@ -2953,6 +2953,21 @@ taxonomies:
       weight: '0'
       parent: '0'
       uuid: 958c9853-8fff-436a-b61c-02132bcb0a82
+      field_authority_link: {  }
+      field_cat_date_begin: {  }
+      field_cat_date_end: {  }
+      field_corp_alt_name: {  }
+      field_type: {  }
+    -
+      vid: corporate_body
+      tid: '1395'
+      langcode: en
+      name: "Margate Women's Institute"
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: c03c6e48-3d6b-42f2-a01c-da95ee384cb3
       field_authority_link: {  }
       field_cat_date_begin: {  }
       field_cat_date_end: {  }
@@ -6263,189 +6278,274 @@ taxonomies:
       vid: country
       tid: '711'
       langcode: en
-      name: bcc
+      name: 'British Columbia'
       description__value: null
       description__format: null
       weight: '0'
       parent: '0'
       uuid: a0b43bcb-dee2-4478-aca7-c9f04ce55cb7
-      field_authority_link: {  }
+      field_authority_link:
+        -
+          uri: 'http://id.loc.gov/vocabulary/countries/bcc'
+          title: 'http://id.loc.gov/vocabulary/countries/bcc'
+          options: {  }
+          source: MarcCountry
     -
       vid: country
       tid: '1387'
       langcode: en
-      name: ctu
+      name: Connecticut
       description__value: null
       description__format: null
       weight: '0'
       parent: '0'
       uuid: fb830050-e9f3-4db8-ac19-7c541e03c8d7
-      field_authority_link: {  }
+      field_authority_link:
+        -
+          uri: 'http://id.loc.gov/vocabulary/countries/ctu'
+          title: 'http://id.loc.gov/vocabulary/countries/ctu'
+          options: {  }
+          source: MarcCountry
     -
       vid: country
       tid: '1360'
       langcode: en
-      name: fr
+      name: France
       description__value: null
       description__format: null
       weight: '0'
       parent: '0'
       uuid: 939dd3a8-c866-42f1-8497-6d45d31a37b1
-      field_authority_link: {  }
+      field_authority_link:
+        -
+          uri: 'http://id.loc.gov/vocabulary/countries/fr'
+          title: 'http://id.loc.gov/vocabulary/countries/fr'
+          options: {  }
+          source: MarcCountry
     -
       vid: country
       tid: '659'
       langcode: en
-      name: ilu
+      name: Illinois
       description__value: null
       description__format: null
       weight: '0'
       parent: '0'
       uuid: 2452b4e1-eac9-49ca-9238-55dd3deb128d
-      field_authority_link: {  }
+      field_authority_link:
+        -
+          uri: 'http://id.loc.gov/vocabulary/countries/ilu'
+          title: 'http://id.loc.gov/vocabulary/countries/ilu'
+          options: {  }
+          source: MarcCountry
     -
       vid: country
       tid: '1024'
       langcode: en
-      name: inu
+      name: Indiana
       description__value: null
       description__format: null
       weight: '0'
       parent: '0'
       uuid: 7d131091-1b28-458d-8333-9b5d5bddc22b
-      field_authority_link: {  }
-    -
-      vid: country
-      tid: '761'
-      langcode: en
-      name: mau
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 0c8a47ae-0f9f-4a9a-a590-edf50e4e5952
-      field_authority_link: {  }
+      field_authority_link:
+        -
+          uri: 'http://id.loc.gov/vocabulary/countries/inu'
+          title: 'http://id.loc.gov/vocabulary/countries/inu'
+          options: {  }
+          source: MarcCountry
     -
       vid: country
       tid: '514'
       langcode: en
-      name: mbc
+      name: Manitoba
       description__value: null
       description__format: null
       weight: '0'
       parent: '0'
       uuid: 8a529af8-297f-4c90-9cc9-0c11fb122b3f
-      field_authority_link: {  }
+      field_authority_link:
+        -
+          uri: 'http://id.loc.gov/vocabulary/countries/mbc'
+          title: 'http://id.loc.gov/vocabulary/countries/mbc'
+          options: {  }
+          source: MarcCountry
+    -
+      vid: country
+      tid: '761'
+      langcode: en
+      name: Massachusetts
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 0c8a47ae-0f9f-4a9a-a590-edf50e4e5952
+      field_authority_link:
+        -
+          uri: 'http://id.loc.gov/vocabulary/countries/mau'
+          title: 'http://id.loc.gov/vocabulary/countries/mau'
+          options: {  }
+          source: MarcCountry
     -
       vid: country
       tid: '502'
       langcode: en
-      name: miu
+      name: Michigan
       description__value: null
       description__format: null
       weight: '0'
       parent: '0'
       uuid: 9a609069-f32d-4d4c-8c15-83431869c8d0
-      field_authority_link: {  }
-    -
-      vid: country
-      tid: '1014'
-      langcode: en
-      name: nju
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 28dfb8a1-0efb-4da0-8bda-d313a074b112
-      field_authority_link: {  }
+      field_authority_link:
+        -
+          uri: 'http://id.loc.gov/vocabulary/countries/miu'
+          title: 'http://id.loc.gov/vocabulary/countries/miu'
+          options: {  }
+          source: MarcCountry
     -
       vid: country
       tid: '533'
       langcode: en
-      name: nkc
+      name: 'New Brunswick'
       description__value: null
       description__format: null
       weight: '0'
       parent: '0'
       uuid: 6824b2fd-4cbf-471d-9eaf-6a8491d51460
-      field_authority_link: {  }
+      field_authority_link:
+        -
+          uri: 'http://id.loc.gov/vocabulary/countries/nkc'
+          title: 'http://id.loc.gov/vocabulary/countries/nkc'
+          options: {  }
+          source: MarcCountry
     -
       vid: country
-      tid: '306'
+      tid: '1014'
       langcode: en
-      name: nsc
+      name: 'New Jersey'
       description__value: null
       description__format: null
       weight: '0'
       parent: '0'
-      uuid: 53bcc4af-8699-4786-bf2f-c09c26572e28
-      field_authority_link: {  }
+      uuid: 28dfb8a1-0efb-4da0-8bda-d313a074b112
+      field_authority_link:
+        -
+          uri: 'http://id.loc.gov/vocabulary/countries/nju'
+          title: 'http://id.loc.gov/vocabulary/countries/nju'
+          options: {  }
+          source: MarcCountry
     -
       vid: country
       tid: '399'
       langcode: en
-      name: nyu
+      name: 'New York (State)'
       description__value: null
       description__format: null
       weight: '0'
       parent: '0'
       uuid: 0e85dc33-67a8-424d-b277-73a4c12840cd
-      field_authority_link: {  }
-    -
-      vid: country
-      tid: '316'
-      langcode: en
-      name: onc
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 87019548-ecec-4f8d-b805-468f5844dea4
-      field_authority_link: {  }
-    -
-      vid: country
-      tid: '277'
-      langcode: en
-      name: pic
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: ff2a8f7a-db2d-41d7-a68d-c014e2c7b1f8
-      field_authority_link: {  }
-    -
-      vid: country
-      tid: '667'
-      langcode: en
-      name: quc
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 688f2da3-0975-4569-99c5-321cbeb5a657
-      field_authority_link: {  }
-    -
-      vid: country
-      tid: '415'
-      langcode: en
-      name: uk
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 6e4aecbd-9f64-4c15-a720-6cb68b5896cb
-      field_authority_link: {  }
+      field_authority_link:
+        -
+          uri: 'http://id.loc.gov/vocabulary/countries/nyu'
+          title: 'http://id.loc.gov/vocabulary/countries/nyu'
+          options: {  }
+          source: MarcCountry
     -
       vid: country
       tid: '778'
       langcode: en
-      name: xx
+      name: 'No place, unknown, or undetermined'
       description__value: null
       description__format: null
       weight: '0'
       parent: '0'
       uuid: c6249ed2-dcb8-4ea3-8776-d7562bc4d9e5
-      field_authority_link: {  }
+      field_authority_link:
+        -
+          uri: 'http://id.loc.gov/vocabulary/countries/xx'
+          title: 'http://id.loc.gov/vocabulary/countries/xx'
+          options: {  }
+          source: MarcCountry
+    -
+      vid: country
+      tid: '306'
+      langcode: en
+      name: 'Nova Scotia'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 53bcc4af-8699-4786-bf2f-c09c26572e28
+      field_authority_link:
+        -
+          uri: 'http://id.loc.gov/vocabulary/countries/nsc'
+          title: 'http://id.loc.gov/vocabulary/countries/nsc'
+          options: {  }
+          source: MarcCountry
+    -
+      vid: country
+      tid: '316'
+      langcode: en
+      name: Ontario
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 87019548-ecec-4f8d-b805-468f5844dea4
+      field_authority_link:
+        -
+          uri: 'http://id.loc.gov/vocabulary/countries/onc'
+          title: 'http://id.loc.gov/vocabulary/countries/onc'
+          options: {  }
+          source: MarcCountry
+    -
+      vid: country
+      tid: '277'
+      langcode: en
+      name: 'Prince Edward Island'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: ff2a8f7a-db2d-41d7-a68d-c014e2c7b1f8
+      field_authority_link:
+        -
+          uri: 'http://id.loc.gov/vocabulary/countries/pic'
+          title: 'http://id.loc.gov/vocabulary/countries/pic'
+          options: {  }
+          source: MarcCountry
+    -
+      vid: country
+      tid: '667'
+      langcode: en
+      name: 'Québec (Province)'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 688f2da3-0975-4569-99c5-321cbeb5a657
+      field_authority_link:
+        -
+          uri: 'http://id.loc.gov/vocabulary/countries/quc'
+          title: 'http://id.loc.gov/vocabulary/countries/quc'
+          options: {  }
+          source: MarcCountry
+    -
+      vid: country
+      tid: '415'
+      langcode: en
+      name: Scotland
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 6e4aecbd-9f64-4c15-a720-6cb68b5896cb
+      field_authority_link:
+        -
+          uri: 'http://id.loc.gov/vocabulary/countries/stk'
+          title: 'http://id.loc.gov/vocabulary/countries/stk'
+          options: {  }
+          source: MarcCountry
   family:
     -
       vid: family
@@ -9375,7 +9475,7 @@ taxonomies:
       description__value: null
       description__format: null
       weight: '62'
-      parent: '60'
+      parent: '63'
       uuid: 520ab135-d64a-4d17-92c5-1dd41be7ac30
       field_authority_link:
         -
@@ -9582,7 +9682,7 @@ taxonomies:
       description__value: null
       description__format: null
       weight: '63'
-      parent: '60'
+      parent: '63'
       uuid: 92625600-917b-48c3-bc42-d092663f870f
       field_authority_link:
         -
@@ -9633,7 +9733,7 @@ taxonomies:
       description__value: null
       description__format: null
       weight: '64'
-      parent: '60'
+      parent: '62'
       uuid: 5f8da1e5-d69b-4240-9257-5aad8ed9a04b
       field_authority_link:
         -
@@ -9814,7 +9914,7 @@ taxonomies:
       description__value: null
       description__format: null
       weight: '65'
-      parent: '60'
+      parent: '61'
       uuid: 057cc35c-bb89-4533-b147-d5b99c290967
       field_authority_link:
         -
@@ -9931,6 +10031,31 @@ taxonomies:
           lat_cos: 0.68793122903026
           lng_rad: -1.1114609233209
           value: '46.53343, -63.68202'
+    -
+      vid: geo_location
+      tid: '1396'
+      langcode: en
+      name: 'Margate (P.E.I.)'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '63'
+      uuid: 5cf0b16b-4a2b-4805-a258-9b74efc3e8b0
+      field_authority_link:
+        -
+          uri: 'https://www.geonames.org/6066204/margate.html'
+          title: 'Margate (Geonames)'
+          options: {  }
+          source: geonames
+      field_geo_alt_name: {  }
+      field_geo_geolocation:
+        -
+          lat: '46.46683'
+          lng: '-63.58201'
+          lat_sin: 0.72497574331468
+          lat_cos: 0.68877439819242
+          lng_rad: -1.109715419536
+          value: '46.46683, -63.58201'
     -
       vid: geo_location
       tid: '100'
@@ -12194,37 +12319,36 @@ taxonomies:
   language:
     -
       vid: language
-      tid: '681'
-      langcode: en
-      name: a
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 8da6d0ab-699e-499f-a050-576908c0c6e6
-      field_authority_link: {  }
-    -
-      vid: language
       tid: '283'
       langcode: en
-      name: eng
+      name: English
       description__value: null
       description__format: null
       weight: '0'
       parent: '0'
       uuid: d3de8d2d-30e4-453f-aa18-4483e3d6bdaa
-      field_authority_link: {  }
+      field_authority_link:
+        -
+          uri: 'http://id.loc.gov/vocabulary/iso639-2/eng'
+          title: 'http://id.loc.gov/vocabulary/iso639-2/eng'
+          options: {  }
+          source: iso639-2
     -
       vid: language
       tid: '548'
       langcode: en
-      name: fre
+      name: French
       description__value: null
       description__format: null
       weight: '0'
       parent: '0'
       uuid: 51487d6d-06f1-4c13-8af0-56a1f6f03c81
-      field_authority_link: {  }
+      field_authority_link:
+        -
+          uri: 'http://id.loc.gov/vocabulary/iso639-2/fre'
+          title: 'http://id.loc.gov/vocabulary/iso639-2/fre'
+          options: {  }
+          source: iso639-2
   person:
     -
       vid: person
@@ -20677,6 +20801,17 @@ taxonomies:
   temporal_subjects:
     -
       vid: temporal_subjects
+      tid: '638'
+      langcode: en
+      name: '1858'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 3179de77-0ad9-424a-96c0-b3cb58021dd9
+      field_authority_link: {  }
+    -
+      vid: temporal_subjects
       tid: '494'
       langcode: en
       name: 1868-96
@@ -20743,6 +20878,17 @@ taxonomies:
       field_authority_link: {  }
     -
       vid: temporal_subjects
+      tid: '1151'
+      langcode: en
+      name: '1929'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 350f4ba3-b8db-4410-9980-0a2524562641
+      field_authority_link: {  }
+    -
+      vid: temporal_subjects
       tid: '883'
       langcode: en
       name: 1959-1979
@@ -20806,26 +20952,4 @@ taxonomies:
       weight: '0'
       parent: '0'
       uuid: 2ab79c63-8068-452f-9488-742c69db5f40
-      field_authority_link: {  }
-    -
-      vid: temporal_subjects
-      tid: '638'
-      langcode: en
-      name: y1858
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 3179de77-0ad9-424a-96c0-b3cb58021dd9
-      field_authority_link: {  }
-    -
-      vid: temporal_subjects
-      tid: '1151'
-      langcode: en
-      name: y1929
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 350f4ba3-b8db-4410-9980-0a2524562641
       field_authority_link: {  }
