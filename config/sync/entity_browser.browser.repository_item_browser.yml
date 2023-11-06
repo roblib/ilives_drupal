@@ -1,0 +1,31 @@
+uuid: 1c25602d-9fc6-4b5d-ac38-d8b2f22f7a19
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.repository_item_browser
+  module:
+    - views
+name: repository_item_browser
+label: 'Repository Item Browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  1ab2c3db-7c7b-461c-9ef7-b27ea44d46d1:
+    id: view
+    uuid: 1ab2c3db-7c7b-461c-9ef7-b27ea44d46d1
+    label: view
+    weight: 1
+    settings:
+      submit_text: 'Select parent'
+      auto_select: false
+      view: repository_item_browser
+      view_display: entity_browser_1

@@ -14,7 +14,7 @@ field_name: field_copyright_date
 entity_type: node
 bundle: islandora_object
 label: 'Copyright Date'
-description: 'Date of copyright of the resource, if such a date is explicitly given.'
+description: 'Date of copyright of the resource, if such a date is explicitly given. Use <a href="https://www.loc.gov/standards/datetime/" target="_blank">EDTF Syntax</a>. Do not add a "c" or other indications that this is the copyright date. '
 required: false
 translatable: false
 default_value: {  }

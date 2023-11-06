@@ -30,9 +30,9 @@ reactions:
       661cf4da-b979-4478-8333-db01a1746d64:
         uuid: 661cf4da-b979-4478-8333-db01a1746d64
         id: 'views_block:media_display_blocks-source'
-        label: ''
+        label: 'Download File'
         provider: views
-        label_display: '0'
+        label_display: visible
         region: content_above
         weight: '0'
         custom_id: views_block_media_display_blocks_source
@@ -41,7 +41,7 @@ reactions:
         unique: 0
         context_id: default_media_display
         context_mapping: {  }
-        views_label: ''
+        views_label: 'Download File'
         items_per_page: none
         third_party_settings: {  }
     include_default_blocks: 1

@@ -25,9 +25,16 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 5
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_height:
+    type: number
+    weight: 10
+    region: content
+    settings:
+      placeholder: ''
     third_party_settings: {  }
   field_media_image:
     type: image_image
@@ -39,10 +46,11 @@ content:
     third_party_settings: {  }
   field_media_of:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 3
     region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
@@ -54,10 +62,17 @@ content:
     third_party_settings: {  }
   field_original_name:
     type: string_textarea
-    weight: 26
+    weight: 9
     region: content
     settings:
       rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_width:
+    type: number
+    weight: 11
+    region: content
+    settings:
       placeholder: ''
     third_party_settings: {  }
   name:
@@ -70,34 +85,33 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 8
+    weight: 7
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   translation:
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
 hidden:
   field_file_size: true
-  field_height: true
   field_mime_type: true
-  field_width: true
   langcode: true

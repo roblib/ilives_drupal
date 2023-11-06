@@ -13,7 +13,7 @@ field_name: field_frequency
 entity_type: node
 bundle: islandora_object
 label: Frequency
-description: ''
+description: 'Enter a frequency from <a href="https://id.loc.gov/vocabulary/frequencies.html" target="_blank">LoC Publication Frequencies</a>. '
 required: false
 translatable: false
 default_value: {  }

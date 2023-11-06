@@ -12,7 +12,7 @@ field_name: field_alt_title
 entity_type: node
 bundle: islandora_object
 label: 'Alternative Title'
-description: ''
+description: 'Any alternative titles go here including translated, uniform, spine titles, etc. There is no way to record the title''s "type".'
 required: false
 translatable: true
 default_value: {  }

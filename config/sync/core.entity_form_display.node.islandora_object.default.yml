@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.repository_item_browser
     - field.field.node.islandora_object.field_abstract
     - field.field.node.islandora_object.field_additional_works
     - field.field.node.islandora_object.field_alt_title
@@ -43,6 +44,7 @@ dependencies:
     - node.type.islandora_object
   module:
     - controlled_access_terms
+    - entity_browser
     - field_group
     - link
     - path
@@ -302,7 +304,7 @@ content:
     region: content
     settings:
       strict_dates: false
-      intervals: false
+      intervals: true
       sets: false
     third_party_settings: {  }
   field_extent:
@@ -396,14 +398,18 @@ content:
       match_limit: 10
     third_party_settings: {  }
   field_member_of:
-    type: entity_reference_autocomplete
+    type: entity_browser_entity_reference
     weight: 37
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      entity_browser: repository_item_browser
+      field_widget_display: label
+      field_widget_edit: false
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
+      selection_mode: selection_append
     third_party_settings: {  }
   field_mode_of_issuance:
     type: options_buttons
