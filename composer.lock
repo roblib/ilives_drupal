@@ -2844,10 +2844,6 @@
                 {
                     "name": "mpotter",
                     "homepage": "https://www.drupal.org/user/616192"
-                },
-                {
-                    "name": "nedjo",
-                    "homepage": "https://www.drupal.org/user/4481"
                 }
             ],
             "description": "Enables administrators to package configuration into modules",
@@ -7590,12 +7586,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mjordan/islandora_workbench_integration.git",
-                "reference": "56d304e9e7bf5cbbf3f9b0f631ee72d19827a65d"
+                "reference": "f3304d8bfaf416f32074d1301580e7021a44dc6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mjordan/islandora_workbench_integration/zipball/56d304e9e7bf5cbbf3f9b0f631ee72d19827a65d",
-                "reference": "56d304e9e7bf5cbbf3f9b0f631ee72d19827a65d",
+                "url": "https://api.github.com/repos/mjordan/islandora_workbench_integration/zipball/f3304d8bfaf416f32074d1301580e7021a44dc6c",
+                "reference": "f3304d8bfaf416f32074d1301580e7021a44dc6c",
                 "shasum": ""
             },
             "default-branch": true,
@@ -7619,9 +7615,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mjordan/islandora_workbench_integration/issues",
-                "source": "https://github.com/mjordan/islandora_workbench_integration/tree/D10"
+                "source": "https://github.com/mjordan/islandora_workbench_integration/tree/main"
             },
-            "time": "2023-08-28T20:15:05+00:00"
+            "time": "2023-11-07T20:51:06+00:00"
         },
         {
             "name": "ml/iri",
