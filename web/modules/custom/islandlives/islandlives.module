@@ -6,6 +6,7 @@
  */
 
 use Drupal\pathauto\PathautoPatternInterface;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_pathauto_pattern_alter().
@@ -21,5 +22,20 @@ function islandlives_pathauto_pattern_alter(PathautoPatternInterface $pattern, a
       $new_pattern = preg_replace('/\[node:field_pid\]/', '[node:nid]', $pattern->getPattern());
       $pattern->setPattern($new_pattern);
     }
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function islandlives_views_pre_render(ViewExecutable $view) {
+  $applicable_views = [
+    'content',
+    'media',
+    'manage_members',
+    'media_of',
+  ];
+  if (isset($view) && (in_array($view->storage->id(), $applicable_views))) {
+    $view->element['#attached']['library'][] = 'islandlives/unpublished';
   }
 }
