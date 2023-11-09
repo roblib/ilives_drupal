@@ -1371,10 +1371,10 @@ display:
         type: table
         options:
           grouping: {  }
-          row_class: ''
+          row_class: '{{ status }}'
           default_row_class: true
           columns:
-            node_bulk_form: node_bulk_form
+            views_bulk_operations_bulk_form: views_bulk_operations_bulk_form
             title: title
             type: type
             field_model: field_model
@@ -1389,7 +1389,7 @@ display:
             operations: operations
           default: changed
           info:
-            node_bulk_form:
+            views_bulk_operations_bulk_form:
               align: ''
               separator: ''
               empty_column: false

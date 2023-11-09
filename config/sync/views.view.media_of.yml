@@ -394,17 +394,18 @@ display:
         type: table
         options:
           grouping: {  }
-          row_class: ''
+          row_class: '{{ status }}'
           default_row_class: true
           columns:
             media_bulk_form: media_bulk_form
             name: name
             bundle: bundle
-            field_media_model: field_media_model
             field_mime_type: field_mime_type
+            field_media_use: field_media_use
             changed: changed
+            status: status
             operations: operations
-          default: field_media_model
+          default: '-1'
           info:
             media_bulk_form:
               align: ''
@@ -425,13 +426,6 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            field_media_model:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
             field_mime_type:
               sortable: true
               default_sort_order: asc
@@ -439,8 +433,20 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
+            field_media_use:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
             changed:
               sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            status:
+              sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
@@ -888,7 +894,7 @@ display:
           entity_type: media
           entity_field: status
           plugin_id: field
-          label: Published
+          label: Status
           exclude: false
           alter:
             alter_text: false
@@ -998,7 +1004,18 @@ display:
           destination: false
       defaults:
         fields: false
-      display_extenders: {  }
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
       path: node/%node/media
       menu:
         type: tab
