@@ -11,7 +11,7 @@ name: pages
 group: Derivatives
 description: 'Derivatives for Pages'
 requireAllConditions: true
-disabled: true
+disabled: false
 conditions:
   parent_node_has_term:
     id: parent_node_has_term
@@ -32,6 +32,7 @@ reactions:
     id: derivative
     saved: false
     actions:
+      get_hocr_from_image: get_hocr_from_image
       get_ocr_from_image: get_ocr_from_image
       image_generate_a_service_file_from_an_original_file: image_generate_a_service_file_from_an_original_file
       image_generate_a_thumbnail_from_an_original_file: image_generate_a_thumbnail_from_an_original_file

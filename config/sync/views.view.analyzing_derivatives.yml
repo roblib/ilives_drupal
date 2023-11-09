@@ -1,22 +1,22 @@
-uuid: b4d619f9-50e3-4ea7-8617-673a6a0505bb
+uuid: 6e5240e3-1a63-4216-b321-6632ca24785e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.media.field_mime_type
-    - media.type.extracted_text
+    - field.storage.media.field_height
+    - field.storage.media.field_width
   module:
     - media
+    - node
     - taxonomy
     - user
-    - views_bulk_operations
-id: fix_hocr_mimetype
-label: 'fix hocr mimetype'
+id: analyzing_derivatives
+label: 'Analyzing Derivatives'
 module: views
-description: ''
+description: 'Temp view by Rosie while caching height and width data in the media'
 tag: ''
-base_table: media_field_data
-base_field: mid
+base_table: node_field_data
+base_field: nid
 display:
   default:
     id: default
@@ -24,17 +24,18 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'fix hocr mimetype'
+      title: 'Pages needing height and width'
       fields:
-        views_bulk_operations_bulk_form:
-          id: views_bulk_operations_bulk_form
-          table: views
-          field: views_bulk_operations_bulk_form
+        node_bulk_form:
+          id: node_bulk_form
+          table: node
+          field: node_bulk_form
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: views_bulk_operations_bulk_form
-          label: 'Views bulk operations'
+          entity_type: node
+          plugin_id: node_bulk_form
+          label: 'Node operations bulk form'
           exclude: false
           alter:
             alter_text: false
@@ -75,35 +76,21 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          batch: true
-          batch_size: 100
-          form_step: true
-          ajax_loader: false
-          buttons: false
           action_title: Action
-          clear_on_exposed: true
-          force_selection_info: true
+          include_exclude: include
           selected_actions:
-            4:
-              action_id: generate_extracted_text_file
-              preconfiguration:
-                add_confirmation: false
-            5:
-              action_id: views_bulk_edit
-              preconfiguration:
-                add_confirmation: false
-                get_bundles_from_results: true
-        name:
-          id: name
-          table: media_field_data
-          field: name
+            - media_attributes_from_iiif_action
+        title:
+          id: title
+          table: node_field_data
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: media
-          entity_field: media
+          entity_type: node
+          entity_field: title
           plugin_id: field
-          label: Name
+          label: Title
           exclude: false
           alter:
             alter_text: false
@@ -158,15 +145,15 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_mime_type:
-          id: field_mime_type
-          table: media__field_mime_type
-          field: field_mime_type
-          relationship: none
+        field_height_value:
+          id: field_height_value
+          table: media__field_height
+          field: field_height_value
+          relationship: reverse__media__field_media_of
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'Mime Type'
+          label: Height
           exclude: false
           alter:
             alter_text: false
@@ -199,7 +186,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -208,9 +195,74 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
+          type: number_integer
           settings:
-            link_to_entity: false
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_width_value:
+          id: field_width_value
+          table: media__field_width
+          field: field_width_value
+          relationship: reverse__media__field_media_of
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Width
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -222,15 +274,17 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: mini
+        type: full
         options:
           offset: 0
-          items_per_page: 10
+          items_per_page: 100
           total_pages: null
           id: 0
           tags:
-            next: ››
-            previous: ‹‹
+            next: 'Next ›'
+            previous: '‹ Previous'
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -239,6 +293,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          quantity: 9
       exposed_form:
         type: basic
         options:
@@ -252,34 +307,41 @@ display:
       access:
         type: perm
         options:
-          perm: 'view media'
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
       empty: {  }
-      sorts: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
       arguments: {  }
       filters:
         status:
           id: status
-          table: media_field_data
+          table: node_field_data
           field: status
-          entity_type: media
+          entity_type: node
           entity_field: status
           plugin_id: boolean
           value: '1'
           group: 1
           expose:
             operator: ''
-        bundle:
-          id: bundle
-          table: media_field_data
-          field: bundle
-          entity_type: media
-          entity_field: bundle
-          plugin_id: bundle
-          value:
-            extracted_text: extracted_text
         field_external_uri_uri:
           id: field_external_uri_uri
           table: taxonomy_term__field_external_uri
@@ -289,7 +351,7 @@ display:
           admin_label: ''
           plugin_id: string
           operator: '='
-          value: 'https://discoverygarden.ca/use#hocr'
+          value: 'http://pcdm.org/use#OriginalFile'
           group: 1
           exposed: false
           expose:
@@ -319,6 +381,56 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        field_height_value:
+          id: field_height_value
+          table: media__field_height
+          field: field_height_value
+          relationship: reverse__media__field_media_of
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          operator: empty
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: false
+          expose:
+            operator_id: field_height_value_op
+            label: 'Height (field_height)'
+            description: ''
+            use_operator: false
+            operator: field_height_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_height_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: 'Height (field_height)'
+            description: null
+            identifier: field_height_value
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
       style:
         type: table
         options:
@@ -327,24 +439,32 @@ display:
           default_row_class: true
           columns:
             views_bulk_operations_bulk_form: views_bulk_operations_bulk_form
-            name: name
-            field_mime_type: field_mime_type
-          default: name
+            title: title
+            field_height_value: field_height_value
+            field_width_value: field_width_value
+          default: '-1'
           info:
             views_bulk_operations_bulk_form:
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            name:
+            title:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            field_mime_type:
-              sortable: false
+            field_height_value:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_width_value:
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
@@ -358,6 +478,11 @@ display:
           description: ''
       row:
         type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       query:
         type: views_query
         options:
@@ -367,15 +492,25 @@ display:
           replica: false
           query_tags: {  }
       relationships:
+        reverse__media__field_media_of:
+          id: reverse__media__field_media_of
+          table: node_field_data
+          field: reverse__media__field_media_of
+          relationship: none
+          group_type: group
+          admin_label: field_media_of
+          entity_type: node
+          plugin_id: entity_reverse
+          required: true
         field_media_use:
           id: field_media_use
           table: media__field_media_use
           field: field_media_use
-          relationship: none
+          relationship: reverse__media__field_media_of
           group_type: group
           admin_label: 'field_media_use: Taxonomy term'
           plugin_id: standard
-          required: false
+          required: true
       header:
         result:
           id: result
@@ -395,9 +530,60 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.media.field_mime_type'
+        - 'config:field.storage.media.field_height'
+        - 'config:field.storage.media.field_width'
+  block_1:
+    id: block_1
+    display_title: Block
+    display_plugin: block
+    position: 2
+    display_options:
+      pager:
+        type: mini
+        options:
+          offset: 0
+          items_per_page: 1
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+      defaults:
+        pager: false
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
+    cache_metadata:
+      max-age: 0
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.media.field_height'
+        - 'config:field.storage.media.field_width'
   page_1:
     id: page_1
     display_title: Page
@@ -416,13 +602,15 @@ display:
           category_fallback: ''
           category_facets: {  }
           category_facets_concat_separator: ', '
-      path: fix-hocr-mimetype
+      path: pages-with-height-and-width
     cache_metadata:
       max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.media.field_mime_type'
+        - 'config:field.storage.media.field_height'
+        - 'config:field.storage.media.field_width'

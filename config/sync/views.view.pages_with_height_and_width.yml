@@ -10,11 +10,10 @@ dependencies:
     - node
     - taxonomy
     - user
-    - views_bulk_operations
 id: pages_with_height_and_width
-label: 'pages with height and width'
+label: 'Pages (needing height and width)'
 module: views
-description: 'Temp view by Rosie while caching height and width data'
+description: 'Temp view by Rosie while caching height and width data in the media'
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -25,17 +24,18 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'pages with height and width'
+      title: 'Pages needing height and width'
       fields:
-        views_bulk_operations_bulk_form:
-          id: views_bulk_operations_bulk_form
-          table: views
-          field: views_bulk_operations_bulk_form
+        node_bulk_form:
+          id: node_bulk_form
+          table: node
+          field: node_bulk_form
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: views_bulk_operations_bulk_form
-          label: 'Views bulk operations'
+          entity_type: node
+          plugin_id: node_bulk_form
+          label: 'Node operations bulk form'
           exclude: false
           alter:
             alter_text: false
@@ -76,19 +76,10 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          batch: true
-          batch_size: 10
-          form_step: true
-          ajax_loader: false
-          buttons: false
           action_title: Action
-          clear_on_exposed: true
-          force_selection_info: false
+          include_exclude: include
           selected_actions:
-            3:
-              action_id: 'islandora_iiif:media_attributes_from_iiif_action:node'
-              preconfiguration:
-                add_confirmation: false
+            - media_attributes_from_iiif_action
         title:
           id: title
           table: node_field_data
@@ -283,10 +274,26 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: some
+        type: full
         options:
           offset: 0
           items_per_page: 100
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Next ›'
+            previous: '‹ Previous'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
       exposed_form:
         type: basic
         options:

@@ -21,9 +21,8 @@ conditions:
     uri: 'http://purl.org/dc/dcmitype/Collection,http://vocab.getty.edu/aat/300242735'
     logic: or
 reactions:
-  blocks:
-    id: blocks
-    blocks: {  }
-    include_default_blocks: 1
+  view_mode_alter:
+    id: view_mode_alter
     saved: false
+    mode: node.collection
 weight: -9

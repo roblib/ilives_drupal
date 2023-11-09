@@ -1,0 +1,20 @@
+uuid: 73a5bbd6-ca98-4600-82f7-429111327a17
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora_text_extraction
+id: get_hocr_from_image
+label: 'Get hOCR from image'
+type: node
+plugin: generate_ocr_derivative
+configuration:
+  queue: islandora-connector-ocr
+  event: 'Generate Derivative'
+  source_term_uri: 'http://pcdm.org/use#OriginalFile'
+  derivative_term_uri: 'https://discoverygarden.ca/use#hocr'
+  mimetype: text/html
+  args: '-c tessedit_create_hocr=1 -c hocr_font_info=0'
+  destination_media_type: extracted_text
+  scheme: public
+  path: '[date:custom:Y]-[date:custom:m]/[node:nid]-[term:name].txt'
