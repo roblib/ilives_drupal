@@ -12,6 +12,43 @@ blocks:
           value: '<p>This book has not yet been digitized. If this is your book, and you would like to give us permission to display it, please contact the Robertson Library.</p>'
           summary: ''
           format: basic_html
+menus:
+  -
+    menu_name: main
+    title: 'Browse by Title'
+    parent: null
+    uri: 'internal:/books/titles'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: 150978f4-0c33-4752-a101-70b6edc90b68
+  -
+    menu_name: main
+    title: 'Browse by Place'
+    parent: null
+    uri: 'internal:/places'
+    link_title: ''
+    description: 'List places referenced in our collection'
+    enabled: true
+    expanded: false
+    weight: 2
+    langcode: en
+    uuid: a01568b7-efd1-4dc1-9885-a2d1f67d6dcc
+  -
+    menu_name: main
+    title: 'Browse on Map'
+    parent: null
+    uri: 'internal:/map'
+    link_title: ''
+    description: 'map-based view of books'
+    enabled: true
+    expanded: false
+    weight: 3
+    langcode: en
+    uuid: 5ac8a8b8-0658-4a2c-8c1d-1c66b826073d
 taxonomies:
   conference:
     -

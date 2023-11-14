@@ -1,0 +1,155 @@
+uuid: 2eb1b8e4-3e48-4128-83bf-83d9f3c8a5ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.audio
+    - media.type.document
+    - media.type.extracted_text
+    - media.type.file
+    - media.type.fits_technical_metadata
+    - media.type.image
+    - media.type.private_file
+    - media.type.remote_video
+    - media.type.video
+    - node.type.islandora_object
+    - taxonomy.vocabulary.conference
+    - taxonomy.vocabulary.corporate_body
+    - taxonomy.vocabulary.country
+    - taxonomy.vocabulary.family
+    - taxonomy.vocabulary.frequencies
+    - taxonomy.vocabulary.genre
+    - taxonomy.vocabulary.geo_location
+    - taxonomy.vocabulary.islandora_display
+    - taxonomy.vocabulary.islandora_media_use
+    - taxonomy.vocabulary.islandora_models
+    - taxonomy.vocabulary.issuance_modes
+    - taxonomy.vocabulary.language
+    - taxonomy.vocabulary.person
+    - taxonomy.vocabulary.physical_form
+    - taxonomy.vocabulary.resource_types
+    - taxonomy.vocabulary.rights_statements
+    - taxonomy.vocabulary.subject
+    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.temporal_subjects
+  module:
+    - entity_browser
+    - file
+    - islandora
+    - media
+    - node
+    - system
+    - taxonomy
+    - toolbar
+    - view_unpublished
+    - views_bulk_edit
+id: island_lives_editor
+label: 'Island Lives Editor'
+weight: -8
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access repository_item_browser entity browser pages'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'create audio media'
+  - 'create document media'
+  - 'create extracted_text media'
+  - 'create file media'
+  - 'create fits_technical_metadata media'
+  - 'create image media'
+  - 'create islandora_object content'
+  - 'create media'
+  - 'create private_file media'
+  - 'create remote_video media'
+  - 'create terms in conference'
+  - 'create terms in corporate_body'
+  - 'create terms in country'
+  - 'create terms in family'
+  - 'create terms in genre'
+  - 'create terms in geo_location'
+  - 'create terms in language'
+  - 'create terms in person'
+  - 'create terms in physical_form'
+  - 'create terms in resource_types'
+  - 'create terms in rights_statements'
+  - 'create terms in subject'
+  - 'create terms in tags'
+  - 'create terms in temporal_subjects'
+  - 'create video media'
+  - 'delete any audio media'
+  - 'delete any document media'
+  - 'delete any extracted_text media'
+  - 'delete any file media'
+  - 'delete any fits_technical_metadata media'
+  - 'delete any image media'
+  - 'delete any islandora_object content'
+  - 'delete any media'
+  - 'delete any private_file media'
+  - 'delete any remote_video media'
+  - 'delete any video media'
+  - 'delete media'
+  - 'delete own audio media'
+  - 'delete own document media'
+  - 'delete own extracted_text media'
+  - 'delete own file media'
+  - 'delete own fits_technical_metadata media'
+  - 'delete own image media'
+  - 'delete own islandora_object content'
+  - 'delete own private_file media'
+  - 'delete own remote_video media'
+  - 'delete own video media'
+  - 'edit any audio media'
+  - 'edit any document media'
+  - 'edit any extracted_text media'
+  - 'edit any file media'
+  - 'edit any fits_technical_metadata media'
+  - 'edit any image media'
+  - 'edit any islandora_object content'
+  - 'edit any private_file media'
+  - 'edit any remote_video media'
+  - 'edit any video media'
+  - 'edit own audio media'
+  - 'edit own document media'
+  - 'edit own extracted_text media'
+  - 'edit own file media'
+  - 'edit own fits_technical_metadata media'
+  - 'edit own image media'
+  - 'edit own islandora_object content'
+  - 'edit own private_file media'
+  - 'edit own remote_video media'
+  - 'edit own video media'
+  - 'edit terms in conference'
+  - 'edit terms in corporate_body'
+  - 'edit terms in country'
+  - 'edit terms in family'
+  - 'edit terms in frequencies'
+  - 'edit terms in genre'
+  - 'edit terms in geo_location'
+  - 'edit terms in islandora_display'
+  - 'edit terms in islandora_media_use'
+  - 'edit terms in islandora_models'
+  - 'edit terms in issuance_modes'
+  - 'edit terms in language'
+  - 'edit terms in person'
+  - 'edit terms in physical_form'
+  - 'edit terms in rights_statements'
+  - 'edit terms in subject'
+  - 'edit terms in tags'
+  - 'edit terms in temporal_subjects'
+  - 'manage media'
+  - 'manage members'
+  - 'revert all revisions'
+  - 'revert islandora_object revisions'
+  - 'update any media'
+  - 'update media'
+  - 'use views bulk edit'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view any unpublished islandora_object content'
+  - 'view islandora_object revisions'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view the administration theme'
