@@ -137,6 +137,9 @@
 	    },
 	    "islandora/islandora": {
 		      "Cache image height and width: https://github.com/Islandora/islandora/pull/983/files": "assets/patches/width-height-caching.patch"
+	    },
+	    "drupal/core": {
+	    	"Images use File formatter. https://www.drupal.org/project/drupal/issues/2867097#comment-14388762": "https://www.drupal.org/files/issues/2022-01-28/drupal-addtionalfieldformatter-2867097-10.patch"
 	    }
 	}
     },
