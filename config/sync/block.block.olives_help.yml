@@ -1,0 +1,22 @@
+uuid: a9268726-6362-45c0-9b68-73bfcb2e4160
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - olives
+_core:
+  default_config_hash: gOzIdELuqjhqu9tCeCvNdbHsWND49mbzAC-rij3fcEg
+id: olives_help
+theme: olives
+region: highlighted
+weight: -14
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: c5c99c4e-ce92-4be6-9bfe-768a95cb60be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_geofield_shape
+    - taxonomy.vocabulary.geo_location
+  module:
+    - geofield
+id: taxonomy_term.geo_location.field_geofield_shape
+field_name: field_geofield_shape
+entity_type: taxonomy_term
+bundle: geo_location
+label: 'Geofield Shape'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

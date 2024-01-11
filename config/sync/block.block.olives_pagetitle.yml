@@ -1,0 +1,25 @@
+uuid: 9538cbba-f986-40b8-af4c-c1c2d7e572ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora
+  theme:
+    - olives
+id: olives_pagetitle
+theme: olives
+region: content_above
+weight: -15
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

@@ -1,0 +1,36 @@
+uuid: ef1a88e4-78d3-4ce5-92e4-32af8e68d77d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:752e7340-7038-47de-87a1-5598d0238716'
+  module:
+    - block_content
+    - islandora
+    - system
+  theme:
+    - olives
+id: olives_bookhasnotbeendigitized
+theme: olives
+region: content_above
+weight: -13
+provider: null
+plugin: 'block_content:752e7340-7038-47de-87a1-5598d0238716'
+settings:
+  id: 'block_content:752e7340-7038-47de-87a1-5598d0238716'
+  label: 'Book has not been digitized'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: true
+    pages: '/*'

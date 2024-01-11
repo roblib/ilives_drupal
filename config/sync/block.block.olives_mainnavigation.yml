@@ -1,0 +1,31 @@
+uuid: 0b565568-13bb-4369-bad9-b6e2d3121dbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - islandora
+    - system
+  theme:
+    - olives
+id: olives_mainnavigation
+theme: olives
+region: secondary_menu
+weight: -15
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

@@ -1,0 +1,30 @@
+uuid: bdc93b55-d917-4a17-8a9e-52b383b9fe6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.resource_type_swc
+  module:
+    - facets
+    - islandora
+  theme:
+    - olives
+id: olives_resourcetypeswc
+theme: olives
+region: sidebar
+weight: -11
+provider: null
+plugin: 'facet_block:resource_type_swc'
+settings:
+  id: 'facet_block:resource_type_swc'
+  label: Type
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: olives_resourcetypeswc
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

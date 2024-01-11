@@ -1,0 +1,30 @@
+uuid: 519b91ab-3a09-49ce-ba4f-f3b134dcc584
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.physical_form
+  module:
+    - facets
+    - islandora
+  theme:
+    - olives
+id: olives_physicalform
+theme: olives
+region: sidebar
+weight: -8
+provider: null
+plugin: 'facet_block:physical_form'
+settings:
+  id: 'facet_block:physical_form'
+  label: 'Physical Form'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: olives_physicalform
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

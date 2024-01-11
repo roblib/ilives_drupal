@@ -1,0 +1,13 @@
+uuid: 66e99c97-a211-4899-ae4d-d5cc9f990148
+langcode: en
+status: true
+dependencies:
+  enforced:
+    theme:
+      - olives
+_core:
+  default_config_hash: YhJKVFi6Gl3aWnJFm1XEbGFMRif1v3amwDeAmF04RGA
+id: olives_medium
+label: 'Olives Medium'
+locked: false
+pattern: 'j  F,  Y'

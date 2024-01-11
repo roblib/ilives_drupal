@@ -36,7 +36,7 @@ reactions:
         region: content_above
         weight: '0'
         custom_id: openseadragon_block
-        theme: olivero
+        theme: olives
         css_class: ''
         unique: 0
         context_id: openseadragon_block

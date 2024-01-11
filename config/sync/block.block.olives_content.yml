@@ -1,0 +1,22 @@
+uuid: d6fb6c46-8428-45ab-9f24-17a72ef82398
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - olives
+_core:
+  default_config_hash: s1KN-dzrnIx-7gecjkAqSWAAvy6jL42A712rcHgwQPw
+id: olives_content
+theme: olives
+region: content
+weight: -15
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

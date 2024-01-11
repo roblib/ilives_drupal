@@ -1,0 +1,22 @@
+uuid: 790452f8-92a6-4450-bf54-df849732f70c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - olives
+_core:
+  default_config_hash: MD-AY9vK-M-2s0lOdmxfgCc273pFeRwhJVNVFkdfl6s
+id: olives_secondary_local_tasks
+theme: olives
+region: content_above
+weight: -11
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

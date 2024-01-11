@@ -43,7 +43,7 @@ reactions:
         region: content_above
         weight: '0'
         custom_id: block_content_752e7340_7038_47de_87a1_5598d0238716
-        theme: olivero
+        theme: olives
         css_class: ''
         unique: 0
         context_id: books_without_pages

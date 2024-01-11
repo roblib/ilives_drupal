@@ -41,7 +41,6 @@ dependencies:
     - system
     - taxonomy
     - toolbar
-    - view_unpublished
     - views_bulk_edit
 id: island_lives_editor
 label: 'Island Lives Editor'
@@ -54,6 +53,8 @@ permissions:
   - 'access repository_item_browser entity browser pages'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'administer media'
+  - 'administer nodes'
   - 'create audio media'
   - 'create document media'
   - 'create extracted_text media'
@@ -148,7 +149,6 @@ permissions:
   - 'use views bulk edit'
   - 'view all media revisions'
   - 'view all revisions'
-  - 'view any unpublished islandora_object content'
   - 'view islandora_object revisions'
   - 'view own unpublished content'
   - 'view own unpublished media'

@@ -1,0 +1,26 @@
+uuid: e4c58ec9-b25c-4de4-8d56-cc47fc7de6ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora
+    - system
+  theme:
+    - olives
+id: olives_breadcrumbs
+theme: olives
+region: content_above
+weight: -16
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

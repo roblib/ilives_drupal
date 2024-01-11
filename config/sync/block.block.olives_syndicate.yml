@@ -1,0 +1,23 @@
+uuid: 04ce67b8-d41d-4f35-8156-55e3c63bce06
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - olives
+_core:
+  default_config_hash: La6DCTlPWxiO0h7cSji9J4ki3jQxFmqD8OpX2L5lJ8k
+id: olives_syndicate
+theme: olives
+region: social
+weight: 0
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }

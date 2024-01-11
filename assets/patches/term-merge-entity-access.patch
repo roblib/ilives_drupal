@@ -1,0 +1,12 @@
+diff --git a/src/Form/MergeTermsTarget.php b/src/Form/MergeTermsTarget.php
+index ed15c4d764db25a296eafa3df96001bed4b30787..ce7df6213d5b16c180c1810a0777182d36fc6552 100644
+--- a/src/Form/MergeTermsTarget.php
++++ b/src/Form/MergeTermsTarget.php
+@@ -158,6 +158,7 @@ class MergeTermsTarget extends FormBase {
+     $query = $this->termStorage->getQuery();
+     $selected_term_ids = $this->getSelectedTermIds();
+     $query->condition('vid', $this->vocabulary->id());
++    $query->accessCheck(TRUE);
+     if (count($selected_term_ids) > 0) {
+       $query->condition('tid', $selected_term_ids, 'NOT IN');
+     }

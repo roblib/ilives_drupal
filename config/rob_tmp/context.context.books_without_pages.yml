@@ -1,0 +1,57 @@
+uuid: 5bf4164e-91aa-43c3-a3e7-6ceaa86fd6f1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:752e7340-7038-47de-87a1-5598d0238716'
+  module:
+    - block_content
+    - islandora
+label: 'Books without pages'
+name: books_without_pages
+group: Display
+description: "Display a message on books that don't have pages"
+requireAllConditions: true
+disabled: false
+conditions:
+  node_has_term:
+    id: node_has_term
+    negate: false
+    uuid: b11155df-f20a-4681-b0be-fe846ddc5067
+    context_mapping:
+      node: '@node.node_route_context:node'
+    uri: 'https://schema.org/Book'
+    logic: and
+  node_referenced_by_node:
+    id: node_referenced_by_node
+    negate: 1
+    reference_field: field_member_of
+    uuid: b04ac6b5-12c7-4623-a57d-da6c646d62f5
+    context_mapping:
+      node: '@node.node_route_context:node'
+reactions:
+  blocks:
+    id: blocks
+    uuid: 44207d36-07fd-4797-bd1b-55debb1a9794
+    blocks:
+      a8ba2fd9-2ae4-4b33-95c4-0fa1c7019a88:
+        uuid: a8ba2fd9-2ae4-4b33-95c4-0fa1c7019a88
+        id: 'block_content:752e7340-7038-47de-87a1-5598d0238716'
+        label: 'Book has not been digitized'
+        provider: block_content
+        label_display: '0'
+        region: content_above
+        weight: '0'
+        custom_id: block_content_752e7340_7038_47de_87a1_5598d0238716
+        theme: olivero
+        css_class: ''
+        unique: 0
+        context_id: books_without_pages
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+weight: 0

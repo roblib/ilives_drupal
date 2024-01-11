@@ -1,0 +1,30 @@
+uuid: 86081cea-118e-4607-8a81-9669c8837764
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.creators_and_contributors
+  module:
+    - facets
+    - islandora
+  theme:
+    - olives
+id: olives_creatorsandcontributors
+theme: olives
+region: sidebar
+weight: -10
+provider: null
+plugin: 'facet_block:creators_and_contributors'
+settings:
+  id: 'facet_block:creators_and_contributors'
+  label: 'Creators and Contributors'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: olives_creatorsandcontributors
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

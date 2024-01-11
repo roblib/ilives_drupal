@@ -67,6 +67,38 @@ reactions:
         context_mapping: {  }
         iiif_manifest_url: '/node/[node:nid]/figures-manifest-original'
         third_party_settings: {  }
+      04d7acba-f1c5-446b-9c0e-085ccd2e4f0a:
+        uuid: 04d7acba-f1c5-446b-9c0e-085ccd2e4f0a
+        id: mirador_block
+        label: 'Book Viewer'
+        provider: islandora_mirador
+        label_display: '0'
+        region: content_above
+        weight: '0'
+        custom_id: mirador_block
+        theme: olives
+        css_class: ''
+        unique: 1
+        context_id: mirador_block_multipaged_items
+        context_mapping: {  }
+        iiif_manifest_url: '/node/[node:nid]/book-manifest-original'
+        third_party_settings: {  }
+      614d9e1b-b7ef-450c-a3ed-fa376b85c4ff:
+        uuid: 614d9e1b-b7ef-450c-a3ed-fa376b85c4ff
+        id: openseadragon_block
+        label: 'Figures in this book'
+        provider: openseadragon
+        label_display: '0'
+        region: content
+        weight: '0'
+        custom_id: openseadragon_block
+        theme: olives
+        css_class: ''
+        unique: 0
+        context_id: mirador_block_multipaged_items
+        context_mapping: {  }
+        iiif_manifest_url: '/node/[node:nid]/figures-manifest-original'
+        third_party_settings: {  }
     include_default_blocks: 1
     saved: false
 weight: -8

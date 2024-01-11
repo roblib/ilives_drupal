@@ -1,0 +1,22 @@
+uuid: 2fd17e12-baa2-4c59-ab76-5f7b43496112
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - olives
+_core:
+  default_config_hash: onK1ULtSreG-bzTBUFzECaZYHt6KNt06AsEn7MytyhA
+id: olives_powered
+theme: olives
+region: footer_bottom
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

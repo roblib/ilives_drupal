@@ -1,0 +1,22 @@
+uuid: 6b4e26c4-2d98-4926-b54a-93f9dff79190
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - olives
+_core:
+  default_config_hash: n6eEjflAv1WidjbNPVpqPbJZltM4toSg9bm8d5QXujw
+id: olives_messages
+theme: olives
+region: highlighted
+weight: -15
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

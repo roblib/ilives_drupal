@@ -2,6 +2,8 @@ uuid: 7c122085-a727-4e49-b0b9-12d262f8f491
 langcode: en
 status: true
 dependencies:
+  content:
+    - 'media:image:ee9b33f0-6945-4b79-90b3-ff96e6f362b3'
   module:
     - node
     - user
@@ -162,7 +164,20 @@ display:
       cache:
         type: tag
         options: {  }
-      empty: {  }
+      empty:
+        entity_media:
+          id: entity_media
+          table: views
+          field: entity_media
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: entity
+          empty: true
+          target: ee9b33f0-6945-4b79-90b3-ff96e6f362b3
+          view_mode: thumbnail
+          tokenize: true
+          bypass_access: true
       sorts:
         field_weight_value:
           id: field_weight_value

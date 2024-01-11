@@ -1,0 +1,30 @@
+uuid: 4184ac96-19c0-49d0-8d59-8a1c74279c7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.year
+  module:
+    - facets
+    - islandora
+  theme:
+    - olives
+id: olives_year
+theme: olives
+region: sidebar
+weight: -3
+provider: null
+plugin: 'facet_block:year'
+settings:
+  id: 'facet_block:year'
+  label: Year
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: olives_year
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

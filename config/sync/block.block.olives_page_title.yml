@@ -1,0 +1,35 @@
+uuid: f17aae53-61ce-4698-ab82-41b77d526a30
+langcode: en
+status: false
+dependencies:
+  module:
+    - islandora
+    - taxonomy
+  theme:
+    - olives
+_core:
+  default_config_hash: 0ftLuqpzGD4Vrsgtrmw9aI4NE0zl_bbDlxS9LMr0JKg
+id: olives_page_title
+theme: olives
+region: content_above
+weight: -10
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: '[current-page:title]'
+  label_display: visible
+  provider: core
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: '@islandora.taxonomy_term_route_context_provider:taxonomy_term'
+    bundles:
+      temporal_subjects: temporal_subjects

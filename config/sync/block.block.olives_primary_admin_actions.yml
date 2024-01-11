@@ -1,0 +1,20 @@
+uuid: 4fa6840a-e0a5-49e1-baa6-29671b8e8733
+langcode: en
+status: true
+dependencies:
+  theme:
+    - olives
+_core:
+  default_config_hash: rxqcUfFwvgbwqIsYSJThvP06Yy4u8mbUP21fmKazVoM
+id: olives_primary_admin_actions
+theme: olives
+region: highlighted
+weight: -16
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

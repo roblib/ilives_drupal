@@ -1,0 +1,30 @@
+uuid: 7aa76a7b-4fde-4808-9b0b-d1dc0ae5783e
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.temporal_subject
+  module:
+    - facets
+    - islandora
+  theme:
+    - olives
+id: olives_subjecttemporal
+theme: olives
+region: sidebar
+weight: -5
+provider: null
+plugin: 'facet_block:temporal_subject'
+settings:
+  id: 'facet_block:temporal_subject'
+  label: 'Temporal Subject '
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: olives_subjecttemporal
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

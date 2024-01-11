@@ -42,7 +42,7 @@ reactions:
         region: content
         weight: '0'
         custom_id: views_block_oai_pmh_item_links_block_1
-        theme: olivero
+        theme: olives
         css_class: ''
         unique: 0
         context_id: display_oai_pmh_item_links

@@ -1,0 +1,30 @@
+uuid: 96ef7f3a-d213-4030-9249-73a038e9a0a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.solr_search_content
+  module:
+    - islandora
+    - views
+  theme:
+    - olives
+id: olives_views_block__solr_search_content_block_1
+theme: olives
+region: content
+weight: -14
+provider: null
+plugin: 'views_block:solr_search_content-block_1'
+settings:
+  id: 'views_block:solr_search_content-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

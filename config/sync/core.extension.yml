@@ -107,6 +107,7 @@ module:
   search_api_solr: 0
   serialization: 0
   shortcut: 0
+  simple_styleguide: 0
   sqlite: 0
   structure_sync: 0
   syslog: 0
@@ -139,4 +140,5 @@ module:
 theme:
   olivero: 0
   claro: 0
+  olives: 0
 profile: minimal

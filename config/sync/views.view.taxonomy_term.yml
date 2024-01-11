@@ -90,24 +90,29 @@ display:
           exposed: false
           granularity: second
       arguments:
-        tid:
-          id: tid
-          table: taxonomy_index
-          field: tid
+        term_node_tid_depth:
+          id: term_node_tid_depth
+          table: node_field_data
+          field: term_node_tid_depth
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: taxonomy_index_tid
-          default_action: 'not found'
+          entity_type: node
+          plugin_id: taxonomy_index_tid_depth
+          default_action: default
           exception:
-            value: ''
+            value: all
             title_enable: false
             title: All
           title_enable: true
-          title: '{{ arguments.tid }}'
-          default_argument_type: fixed
+          title: '{{arguments.tid}}'
+          default_argument_type: taxonomy_tid
           default_argument_options:
-            argument: ''
+            term_page: '1'
+            node: false
+            limit: false
+            vids: {  }
+            anyall: ','
           default_argument_skip_url: false
           summary_options:
             base_path: ''
@@ -128,9 +133,8 @@ display:
             operation: view
             multiple: 0
           break_phrase: false
-          add_table: false
-          require_value: false
-          reduce_duplicates: false
+          depth: 10
+          use_taxonomy_term_path: false
       filters:
         langcode:
           id: langcode
@@ -228,7 +232,7 @@ display:
         options:
           query_comment: ''
           disable_sql_rewrite: false
-          distinct: false
+          distinct: true
           replica: false
           query_tags: {  }
       relationships: {  }
@@ -244,7 +248,7 @@ display:
           admin_label: ''
           plugin_id: entity
           empty: true
-          target: '{{ raw_arguments.tid }}'
+          target: '{{ raw_arguments.term_node_tid_depth }}'
           view_mode: full
           tokenize: true
           bypass_access: false
@@ -306,7 +310,95 @@ display:
       query:
         type: views_query
         options: {  }
-      display_extenders: {  }
+      defaults:
+        header: false
+      header:
+        entity_taxonomy_term_1:
+          id: entity_taxonomy_term_1
+          table: views
+          field: entity_taxonomy_term
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: entity
+          empty: true
+          target: '{{ raw_arguments.term_node_tid_depth }}'
+          view_mode: default
+          tokenize: true
+          bypass_access: false
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
+      path: taxonomy/term/%
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  page_2:
+    id: page_2
+    display_title: Page
+    display_plugin: page
+    position: 1
+    display_options:
+      enabled: false
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        header: false
+      header:
+        entity_taxonomy_term:
+          id: entity_taxonomy_term
+          table: views
+          field: entity_taxonomy_term
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: entity
+          empty: true
+          target: '{{ raw_arguments.term_node_tid_depth }}'
+          view_mode: full
+          tokenize: true
+          bypass_access: false
+        entity_taxonomy_term_1:
+          id: entity_taxonomy_term_1
+          table: views
+          field: entity_taxonomy_term
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: entity
+          empty: true
+          target: '{{ raw_arguments.term_node_tid_depth }}'
+          view_mode: default
+          tokenize: true
+          bypass_access: false
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
       path: taxonomy/term/%
     cache_metadata:
       max-age: -1

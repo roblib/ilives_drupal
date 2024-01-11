@@ -1,0 +1,29 @@
+uuid: 1f70cbca-cb6d-4846-bf39-ed7d0392e55f
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora
+  theme:
+    - olives
+_core:
+  default_config_hash: dU2yzV3ErzQ9hd5VApDm1i8jJnCu6H7_x7ZpcSUdzcg
+id: olives_primary_local_tasks
+theme: olives
+region: content_above
+weight: -14
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
