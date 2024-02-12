@@ -24,7 +24,19 @@
                     "type": "zip"
                 }
             }
-        }
+        },
+	{
+	    "type": "package",
+	    "package": {
+	        "name": "rdrew/olives",
+		"type": "drupal-custom-theme",
+		"version": "dev-master",
+		"source": {
+	            "type": "git",
+	            "url": "git@git.library.upei.ca:rdrew/olives.git"	    
+		}
+	    }
+	}
     ],
     "require": {
         "php": "^8",
@@ -33,8 +45,9 @@
         "drupal/admin_toolbar": "^3.1",
         "drupal/advanced_search": "^2",
         "drupal/better_exposed_filters": "^6.0",
-        "drupal/bibcite": "^2.0@beta",
+        "drupal/bibcite": "^3.0@beta",
         "drupal/citation_select": "^1.0@beta",
+        "drupal/config_update": "^2.0@alpha",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/entity_browser": "*",
@@ -64,7 +77,7 @@
         "drupal/views_data_export": "^1.2",
         "drupal/views_field_view": "^1.0@beta",
         "drupal/views_natural_sort": "^2.0@alpha",
-        "drush/drush": "^11",
+        "drush/drush": "^12",
         "islandora-rdm/islandora_fits": "dev-8.x-1.x as 1.x-dev",
         "islandora/controlled_access_terms": "^2",
         "islandora/islandora": "^2",
@@ -72,6 +85,7 @@
         "islandora/openseadragon": "^2",
         "islandora/views_nested_details": "^1.0",
         "library/pdf.js": "^2.4",
+	"rdrew/olives": "dev-master",
         "mjordan/islandora_workbench_integration": "dev-main"
     },
     "conflict": {
