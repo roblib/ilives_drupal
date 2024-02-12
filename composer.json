@@ -26,16 +26,8 @@
             }
         },
 	{
-	    "type": "package",
-	    "package": {
-	        "name": "rdrew/olives",
-		"type": "drupal-custom-theme",
-		"version": "dev-master",
-		"source": {
-	            "type": "git",
-	            "url": "git@git.library.upei.ca:rdrew/olives.git"	    
-		}
-	    }
+	    "type": "vcs",
+	    "url": "https://git.library.upei.ca/rdrew/olives.git"	    
 	}
     ],
     "require": {
@@ -147,9 +139,6 @@
             ]
         },
         "patches": {
-	    "islandora/islandora": {
-		      "Cache image height and width: https://github.com/Islandora/islandora/pull/983/files": "assets/patches/width-height-caching.patch"
-	    },
 	    "drupal/term_merge": {
 	        "https://www.drupal.org/project/term_merge/issues/3381748": "https://git.drupalcode.org/project/term_merge/-/merge_requests/16.diff"
 	    },
