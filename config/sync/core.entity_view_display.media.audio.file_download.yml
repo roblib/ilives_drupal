@@ -13,7 +13,7 @@ dependencies:
     - field.field.media.audio.field_track
     - media.type.audio
   module:
-    - filehash
+    - file
 _core:
   default_config_hash: 2FZ_TcS2MGA5tQMskHrjKwJ_ucnDEdIfsnMG5MHhjyA
 id: media.audio.file_download
@@ -22,10 +22,9 @@ bundle: audio
 mode: file_download
 content:
   field_media_audio_file:
-    type: filehash_table
+    type: file_default
     label: visually_hidden
     settings:
-      algo: sha1
       use_description_as_link_text: true
     third_party_settings: {  }
     weight: 0

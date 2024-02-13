@@ -10,7 +10,7 @@ dependencies:
 id: olives_search
 theme: olives
 region: secondary_menu
-weight: -16
+weight: -17
 provider: null
 plugin: search_block
 settings:

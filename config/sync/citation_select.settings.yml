@@ -1,10 +1,16 @@
 csl_map:
   field_model:
     - type
-  field_description:
+  field_abstract:
     - abstract
+  field_edition:
+    - edition
   field_genre:
     - genre
+  field_isbn:
+    - ISBN
+  field_note:
+    - note
   field_linked_agent:
     - publisher
     - author
@@ -23,4 +29,5 @@ typed_relation_map:
   'relators:ctb': contributor
   'relators:edt': editor
   'relators:pbl': publisher
+  'relators:cre': author
 reference_type_field_map: {  }

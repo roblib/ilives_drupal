@@ -11,8 +11,8 @@ dependencies:
     - olives
 id: olives_mainnavigation
 theme: olives
-region: secondary_menu
-weight: -15
+region: primary_menu
+weight: -17
 provider: null
 plugin: 'system_menu_block:main'
 settings:

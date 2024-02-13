@@ -1,0 +1,36 @@
+uuid: 1b4af2d2-f71f-4992-8467-b66929ad82de
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f664361b-3de8-488c-b4e0-07afce89f863'
+  module:
+    - block_content
+    - islandora
+    - system
+  theme:
+    - olives
+id: olives_linktofullsearch
+theme: olives
+region: content_above
+weight: -14
+provider: null
+plugin: 'block_content:f664361b-3de8-488c-b4e0-07afce89f863'
+settings:
+  id: 'block_content:f664361b-3de8-488c-b4e0-07afce89f863'
+  label: 'Link to full search'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: /search

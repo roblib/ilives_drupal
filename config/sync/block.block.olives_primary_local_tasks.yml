@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - islandora
+    - system
   theme:
     - olives
 _core:
@@ -11,7 +12,7 @@ _core:
 id: olives_primary_local_tasks
 theme: olives
 region: content_above
-weight: -14
+weight: -15
 provider: null
 plugin: local_tasks_block
 settings:
@@ -27,3 +28,7 @@ visibility:
     negate: false
     context_mapping: {  }
     mimetype: ''
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

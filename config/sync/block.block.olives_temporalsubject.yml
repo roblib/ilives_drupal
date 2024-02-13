@@ -1,0 +1,36 @@
+uuid: cd97f941-bc8b-4023-8a0c-80fbaeb866fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.temporal_subject_full
+  module:
+    - context
+    - facets
+    - islandora
+  theme:
+    - olives
+id: olives_temporalsubject
+theme: olives
+region: sidebar
+weight: -2
+provider: null
+plugin: 'facet_block:temporal_subject_full'
+settings:
+  id: 'facet_block:temporal_subject_full'
+  label: 'Time periods'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: olives_temporalsubject
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    view_inclusion:
+      view-solr_search_content-page_2: view-solr_search_content-page_2
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

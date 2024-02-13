@@ -4,12 +4,13 @@ status: true
 dependencies:
   module:
     - islandora
+    - system
   theme:
     - olives
 id: olives_pagetitle
 theme: olives
 region: content_above
-weight: -15
+weight: -16
 provider: null
 plugin: page_title_block
 settings:
@@ -23,3 +24,7 @@ visibility:
     negate: false
     context_mapping: {  }
     mimetype: ''
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

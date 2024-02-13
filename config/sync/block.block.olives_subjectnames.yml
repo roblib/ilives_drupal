@@ -12,12 +12,12 @@ dependencies:
 id: olives_subjectnames
 theme: olives
 region: sidebar
-weight: -7
+weight: -12
 provider: null
 plugin: 'facet_block:subject_name'
 settings:
   id: 'facet_block:subject_name'
-  label: 'Subject (Names)'
+  label: 'Names as subjects'
   label_display: visible
   provider: facets
   context_mapping: {  }

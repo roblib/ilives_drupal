@@ -1,0 +1,36 @@
+uuid: d312ed6c-a8aa-43cb-b5e7-373c0e6f903a
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.creators_and_contributors_full
+  module:
+    - context
+    - facets
+    - islandora
+  theme:
+    - olives
+id: olives_creatorsandcontributorsfull
+theme: olives
+region: sidebar
+weight: -5
+provider: null
+plugin: 'facet_block:creators_and_contributors_full'
+settings:
+  id: 'facet_block:creators_and_contributors_full'
+  label: 'Creators and Contributors'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: olives_creatorsandcontributorsfull
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    view_inclusion:
+      view-solr_search_content-page_2: view-solr_search_content-page_2
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

@@ -1,0 +1,36 @@
+uuid: e9aedf9c-3e28-4c90-a8b5-8e5a82940a60
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.year_full
+  module:
+    - context
+    - facets
+    - islandora
+  theme:
+    - olives
+id: olives_yearfull
+theme: olives
+region: sidebar
+weight: -6
+provider: null
+plugin: 'facet_block:year_full'
+settings:
+  id: 'facet_block:year_full'
+  label: Year
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: olives_yearfull
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    view_inclusion:
+      view-solr_search_content-page_2: view-solr_search_content-page_2
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

@@ -14,7 +14,7 @@ dependencies:
     - field.field.media.file.field_width
     - media.type.file
   module:
-    - filehash
+    - file
 _core:
   default_config_hash: xvDrCk0MLOxsyqOt9bqbAvT-qq1yONc-knLG55Rf9Aw
 id: media.file.file_download
@@ -23,10 +23,9 @@ bundle: file
 mode: file_download
 content:
   field_media_file:
-    type: filehash_table
+    type: file_default
     label: visually_hidden
     settings:
-      algo: sha1
       use_description_as_link_text: true
     third_party_settings: {  }
     weight: 0

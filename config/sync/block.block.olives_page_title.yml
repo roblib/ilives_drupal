@@ -12,7 +12,7 @@ _core:
 id: olives_page_title
 theme: olives
 region: content_above
-weight: -10
+weight: -9
 provider: null
 plugin: page_title_block
 settings:

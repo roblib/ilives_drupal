@@ -1,0 +1,31 @@
+uuid: cbe4471d-5173-4dcf-a077-12412ec5b001
+langcode: en
+status: true
+dependencies:
+  module:
+    - advanced_search
+    - islandora
+    - system
+  theme:
+    - olives
+id: olives_solrsearchcontentsearchresultspagerforsearchwithpages
+theme: olives
+region: content_above
+weight: -11
+provider: null
+plugin: 'advanced_search_result_pager:solr_search_content__page_2'
+settings:
+  id: 'advanced_search_result_pager:solr_search_content__page_2'
+  label: 'Solr search content: Search Results Pager for Search with pages and figures'
+  label_display: '0'
+  provider: advanced_search
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: /search_full

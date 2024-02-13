@@ -1,0 +1,36 @@
+uuid: 7a425685-63fd-496e-83d9-2326fc7bca75
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.subject_topic
+  module:
+    - context
+    - facets
+    - islandora
+  theme:
+    - olives
+id: olives_subjecttopic_2
+theme: olives
+region: sidebar
+weight: -13
+provider: null
+plugin: 'facet_block:subject_topic'
+settings:
+  id: 'facet_block:subject_topic'
+  label: Topics
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: olives_subjecttopic_2
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    view_inclusion:
+      view-solr_search_content-page_1: view-solr_search_content-page_1
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

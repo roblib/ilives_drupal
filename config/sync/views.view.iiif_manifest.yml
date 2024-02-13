@@ -195,8 +195,12 @@ display:
         options:
           perm: 'view media'
       cache:
-        type: tag
-        options: {  }
+        type: time
+        options:
+          results_lifespan: 21600
+          results_lifespan_custom: 0
+          output_lifespan: 21600
+          output_lifespan_custom: 0
       empty: {  }
       sorts:
         field_weight_value:
@@ -246,7 +250,6 @@ display:
           title: ''
           default_argument_type: node
           default_argument_options: {  }
-          default_argument_skip_url: false
           summary_options:
             base_path: ''
             count: true
@@ -481,6 +484,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - request_format
         - url
         - user.permissions
       tags:
@@ -514,7 +518,6 @@ display:
           title: ''
           default_argument_type: node
           default_argument_options: {  }
-          default_argument_skip_url: false
           summary_options:
             base_path: ''
             count: true
@@ -649,6 +652,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - request_format
         - url
         - user.permissions
       tags:
@@ -764,6 +768,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - request_format
         - url
         - user.permissions
       tags:
@@ -819,6 +824,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - request_format
         - url
         - user.permissions
       tags:
@@ -882,7 +888,6 @@ display:
           title: ''
           default_argument_type: node
           default_argument_options: {  }
-          default_argument_skip_url: false
           summary_options:
             base_path: ''
             count: true
@@ -1034,6 +1039,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - request_format
         - url
         - user.permissions
       tags:

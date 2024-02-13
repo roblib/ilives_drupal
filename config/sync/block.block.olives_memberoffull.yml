@@ -1,0 +1,36 @@
+uuid: cb59c661-57a3-4710-b49d-1aec9a6f64e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.member_of_full_
+  module:
+    - context
+    - facets
+    - islandora
+  theme:
+    - olives
+id: olives_memberoffull
+theme: olives
+region: sidebar
+weight: -7
+provider: null
+plugin: 'facet_block:member_of_full_'
+settings:
+  id: 'facet_block:member_of_full_'
+  label: 'Member of'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: olives_memberoffull
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    view_inclusion:
+      view-solr_search_content-page_2: view-solr_search_content-page_2
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

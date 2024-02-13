@@ -10,7 +10,7 @@ dependencies:
 id: olives_breadcrumbs
 theme: olives
 region: content_above
-weight: -16
+weight: -17
 provider: null
 plugin: system_breadcrumb_block
 settings:

@@ -1,0 +1,40 @@
+uuid: 17941ee7-c16a-4c37-8e4f-1a7ef1922165
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.file_download
+    - field.field.media.extracted_text.field_edited_text
+    - field.field.media.extracted_text.field_media_file
+    - field.field.media.extracted_text.field_media_of
+    - field.field.media.extracted_text.field_media_use
+    - field.field.media.extracted_text.field_mime_type
+    - media.type.extracted_text
+  module:
+    - file
+_core:
+  default_config_hash: 98rg2WZr7qjNh0gmlzYQcToIh749Znv-1ZYBDHYSAwc
+id: media.extracted_text.file_download
+targetEntityType: media
+bundle: extracted_text
+mode: file_download
+content:
+  field_media_file:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  created: true
+  field_edited_text: true
+  field_media_of: true
+  field_media_use: true
+  field_mime_type: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

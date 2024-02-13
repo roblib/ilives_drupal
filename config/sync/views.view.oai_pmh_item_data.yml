@@ -14,6 +14,7 @@ dependencies:
     - field.storage.node.field_temporal_subject
     - search_api.index.default_solr_index
   module:
+    - advanced_search
     - controlled_access_terms
     - search_api
 id: oai_pmh_item_data
@@ -425,10 +426,10 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
+          click_sort_column: target_id
+          type: entity_reference_url_title
           settings:
-            link_to_entity: false
+            separator: 'Items in Collection'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -439,13 +440,69 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          field_rendering: true
+          field_rendering: false
           fallback_handler: search_api
           fallback_options:
             link_to_item: false
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
+            display_methods:
+              conference:
+                display_method: label
+                view_mode: default
+              corporate_body:
+                display_method: label
+                view_mode: default
+              country:
+                display_method: label
+                view_mode: default
+              family:
+                display_method: label
+                view_mode: default
+              frequencies:
+                display_method: label
+                view_mode: default
+              genre:
+                display_method: label
+                view_mode: default
+              geo_location:
+                display_method: label
+                view_mode: default
+              islandora_display:
+                display_method: label
+              islandora_media_use:
+                display_method: label
+                view_mode: default
+              islandora_models:
+                display_method: label
+                view_mode: default
+              issuance_modes:
+                display_method: label
+                view_mode: default
+              language:
+                display_method: label
+                view_mode: default
+              person:
+                display_method: label
+                view_mode: default
+              physical_form:
+                display_method: label
+                view_mode: default
+              resource_types:
+                display_method: label
+                view_mode: default
+              rights_statements:
+                display_method: label
+                view_mode: default
+              subject:
+                display_method: label
+                view_mode: default
+              tags:
+                display_method: label
+              temporal_subjects:
+                display_method: label
+                view_mode: default
         field_edtf_date_issued:
           id: field_edtf_date_issued
           table: search_api_datasource_default_solr_index_entity_node
@@ -1210,7 +1267,6 @@ display:
           title: ''
           default_argument_type: node
           default_argument_options: {  }
-          default_argument_skip_url: false
           summary_options: {  }
           summary:
             sort_order: asc

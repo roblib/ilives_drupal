@@ -63,6 +63,14 @@ processor_configs:
       sort: 40
     settings:
       sort: ASC
+  exclude_specified_items:
+    processor_id: exclude_specified_items
+    weights:
+      build: 50
+    settings:
+      exclude: s.n.
+      regex: false
+      invert: false
   hide_inactive_siblings_processor:
     processor_id: hide_inactive_siblings_processor
     weights:

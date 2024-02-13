@@ -12,7 +12,7 @@ dependencies:
 id: olives_year
 theme: olives
 region: sidebar
-weight: -3
+weight: -15
 provider: null
 plugin: 'facet_block:year'
 settings:

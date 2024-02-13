@@ -12,7 +12,7 @@ dependencies:
 id: olives_creatorsandcontributors
 theme: olives
 region: sidebar
-weight: -10
+weight: -14
 provider: null
 plugin: 'facet_block:creators_and_contributors'
 settings:

@@ -12,12 +12,12 @@ dependencies:
 id: olives_subjecttemporal
 theme: olives
 region: sidebar
-weight: -5
+weight: -11
 provider: null
 plugin: 'facet_block:temporal_subject'
 settings:
   id: 'facet_block:temporal_subject'
-  label: 'Temporal Subject '
+  label: 'Time periods'
   label_display: visible
   provider: facets
   context_mapping: {  }
